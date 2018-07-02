@@ -2,20 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { createStore, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
-
-import registerServiceWorker from './registerServiceWorker';
-
 import createSagaMiddleware from 'redux-saga';
-
-import { Route, Switch } from 'react-router';
 import { createBrowserHistory } from 'history';
 import { connectRouter, routerMiddleware, ConnectedRouter } from 'connected-react-router';
+
+import registerServiceWorker from './registerServiceWorker';
 
 import reducer from './reducer';
 import saga from './saga';
 
 import './index.css';
-import HomePage from './HomePage';
+import Routes from './Routes';
 
 // create the saga middleware
 const sagaMiddleware = createSagaMiddleware();
@@ -43,9 +40,7 @@ sagaMiddleware.run(saga);
 ReactDOM.render(
   <Provider store={store}>
     <ConnectedRouter history={history}>
-      <Switch>
-        <Route path="/" exact component={HomePage} />
-      </Switch>
+      <Routes/>
     </ConnectedRouter>
   </Provider>
   ,document.getElementById('root')
