@@ -6,15 +6,14 @@ import ReactMarkdown from 'react-markdown';
 
 import Header from './Header';
 
-import aboutMe from './sections-text/about-me.md';
-
 import ny from './assets/ny.jpg';
 import sf from './assets/sf.jpg';
-import hiking from './assets/hiking.jpg';
+// import hiking from './assets/hiking.jpg';
 
 const Wrapper = styled.div`
   text-align: center;
   position: relative;
+  font-size: 14px;
 
   ${({ menuOpen }) => css`
     margin-left: ${menuOpen ? '300px' : 0}
@@ -42,12 +41,20 @@ const Section = styled.section`
 
 const MainSection = styled(Section)`
   background: #dddedd;
-`
+`;
 
 const AltSection = styled(Section)`
   margin-top: -5px;
   background: #f4f3f5;
   padding-bottom: 20px;
+`;
+
+const CenterContainer = styled.div`
+  max-width: 780px;
+  padding: 0 20px;
+  margin: 0 auto;
+
+  text-align: justify;
 `;
 
 const FullWidthYouTube = styled(YouTube)`
@@ -65,15 +72,23 @@ const YouTubeWrapper = styled.div`
   height: 0;
 `;
 
+const TEXT_PATHS = {
+  aboutMe: '/sections-text/about-me.md',
+};
+
 export default class App extends Component {
   constructor() {
     super();
 
     this.state = {
-      menuOpen: false
+      menuOpen: false,
     };
 
     autoBind(this);
+  }
+
+  componentDidMount() {
+    this.fetchText();
   }
 
   onMenuToggle(menuOpen) {
@@ -82,17 +97,30 @@ export default class App extends Component {
     });
   }
 
+  fetchText() {
+    Object.entries(TEXT_PATHS).forEach(async ([name, path]) => {
+      const res = await fetch(path);
+      const text = await res.text();
+      this.setState({
+        [name]: text,
+      });
+    });
+  }
+
   render() {
     const {
-      menuOpen
+      menuOpen,
+      aboutMe,
     } = this.state;
 
     return (
       <Wrapper menuOpen={menuOpen}>
-        <Header onMenuToggle={this.onMenuToggle}/>
+        <Header onMenuToggle={this.onMenuToggle} />
 
         <MainSection>
-          <Heading>Watch My Story</Heading>
+          <Heading>
+Watch My Story
+          </Heading>
           <YouTubeWrapper>
             <FullWidthYouTube
               videoId="z1VNwapOb8E"
@@ -101,24 +129,32 @@ export default class App extends Component {
         </MainSection>
 
         <AltSection>
-          <Heading>About Mee</Heading>
+          <Heading>
+About Me
+          </Heading>
 
-          <ReactMarkdown source={aboutMe} />
+          <CenterContainer>
+            <ReactMarkdown source={aboutMe} />
+          </CenterContainer>
         </AltSection>
 
         <MainSection>
-          <Heading>NY -> SF Transplant</Heading>
+          <Heading>
+NY -> SF Transplant
+          </Heading>
 
           <Slide>
-            <SlideImage src={ny}/>
-            <SlideImage src={sf}/>
+            <SlideImage src={ny} />
+            <SlideImage src={sf} />
           </Slide>
         </MainSection>
 
         <AltSection>
-          <Heading>Hobbies</Heading>
+          <Heading>
+Hobbies
+          </Heading>
           <Slide>
-            <SlideImage src={hiking} />
+            <SlideImage />
           </Slide>
         </AltSection>
       </Wrapper>

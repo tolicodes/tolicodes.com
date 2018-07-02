@@ -15,7 +15,8 @@ import {
 
 import SideMenu from './SideMenu';
 
-const ICON_SIZE = 13;
+const MOBILE_BREAKPOINT = 768;
+const ICON_SIZE = 13
 
 const Wrapper = styled.header`
   padding: 20px 0;
@@ -37,6 +38,7 @@ const Title = styled.h1`
 
 const Subtitle = styled.h4`
   margin: 0;
+  font-size: 16px;
 `;
 
 const Links = styled.div`
@@ -75,6 +77,10 @@ const Link = styled.a`
 const LinkLabel = styled.span`
   display: inline-block;
   margin-left: 5px;
+
+  @media(max-width: ${MOBILE_BREAKPOINT}px) {
+    display: none;
+  }
 `;
 
 export default class Header extends Component {
