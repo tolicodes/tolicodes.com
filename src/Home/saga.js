@@ -1,10 +1,12 @@
 import {
   takeLatest,
+  select,
+  put,
   all,
 } from 'redux-saga/effects';
 
 import {
-  apiCall,
+  getHomeText,
 } from './api';
 
 import {
@@ -12,17 +14,29 @@ import {
 } from '../api';
 
 import {
-  DO_API_CALL,
-  setApiResponse,
+  DO_GET_HOME_TEXT,
+  doGetHomeText,
+  setHomeText,
 } from './actions';
 
-function* doApiCall() {
-  const res = yield handleError(() => apiCall());
-  if(res) setApiResponse(res);
+function* selectPathName() {
+  return yield select(({ router }) => router.location.pathname);
+}
+
+function* onDoGetHomeText() {
+  const res = yield handleError(() => getHomeText());
+  if(res) yield put(setHomeText(res));
+}
+
+function* onInitialize() {
+  if ((yield selectPathName()) === '/') {
+    yield put(doGetHomeText());
+  }
 }
 
 export default function* root() {
   yield all([
-    yield takeLatest(DO_API_CALL, doApiCall),
+    onInitialize(),
+    yield takeLatest(DO_GET_HOME_TEXT, onDoGetHomeText),
   ]);
 }

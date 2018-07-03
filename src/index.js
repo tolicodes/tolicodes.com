@@ -34,12 +34,25 @@ const store = createStore(
   ),
 );
 
-// then run the saga
 sagaMiddleware.run(saga);
+
+function hashLinkScroll() {
+  const { pathname } = window.location;
+  console.log(pathname);
+  if (pathname !== '') {
+    // Push onto callback queue so it runs after the DOM is updated,
+    // this is required when navigating from a different page so that
+    // the element is rendered on the page before trying to getElementById.
+    setTimeout(() => {
+      const element = document.getElementById(pathname);
+      if (element) element.scrollIntoView();
+    }, 0);
+  }
+}
 
 ReactDOM.render(
   <Provider store={store}>
-    <ConnectedRouter history={history}>
+    <ConnectedRouter history={history} onUpdate={hashLinkScroll}>
       <Routes/>
     </ConnectedRouter>
   </Provider>

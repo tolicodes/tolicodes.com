@@ -2,7 +2,7 @@ import { stringify } from 'qs';
 
 const apiBase = process.env.REACT_APP_API_ROOT;
 
-async function api(path, data, method = 'GET', extraParams) {
+async function api(path, data, method = 'GET', { type = 'json', ...extraParams } = {}) {
   let reqBody;
   let params = '';
 
@@ -11,10 +11,17 @@ async function api(path, data, method = 'GET', extraParams) {
   } else {
     reqBody = JSON.stringify(data);
   }
-  const response = await fetch(apiBase + path + params, {
-    headers: {
+
+  const headers = type === 'json'
+    ? {
       Accept: 'application/json',
       'Content-Type': 'application/json',
+    }
+    : {};
+
+  const response = await fetch(apiBase + path + params, {
+    headers: {
+      ...headers,
       'x-access-token': localStorage.getItem('jwt'),
     },
     body: reqBody,
@@ -29,8 +36,10 @@ async function api(path, data, method = 'GET', extraParams) {
 
   let body = {};
 
-  if (method !== 'DELETE') {
-    body = await response.json()
+  if (method !== 'DELETE' && type === 'json') {
+    body = await response.json();
+  } else {
+    body = await response.text();
   }
 
   if (!ok) {

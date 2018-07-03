@@ -1,20 +1,20 @@
 import update from 'immutability-helper';
 
 import {
-  SET_API_RESPONSE,
+  SET_HOME_TEXT,
 } from './actions';
 
 const initialState = {
-  apiResponse: null,
+  homeText: null,
 };
 
 export default function (state = initialState, action) {
   switch (action.type) {
-    case SET_API_RESPONSE: {
+    case SET_HOME_TEXT: {
       return update(
         state,
         {
-          apiResponse: {
+          homeText: {
             $set: action.data,
           }
         }

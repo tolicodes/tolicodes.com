@@ -97,9 +97,9 @@ export default class Header extends Component {
   onClickMenuButton() {
     this.setState({
       menuOpen: !this.state.menuOpen,
+    }, () => {
+      this.props.onMenuToggle(this.state.menuOpen);
     });
-
-    this.props.onMenuToggle(this.state.menuOpen);
   }
 
   render() {

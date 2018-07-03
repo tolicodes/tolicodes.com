@@ -1,10 +1,10 @@
-export const DO_API_CALL = 'DO_API_CALL';
-export const SET_API_RESPONSE = 'SET_API_RESPONSE';
+export const DO_GET_HOME_TEXT = 'DO_GET_HOME_TEXT';
+export const SET_HOME_TEXT = 'SET_HOME_TEXT';
 
-export function apiCall() {
-  return { type: DO_API_CALL };
+export function doGetHomeText() {
+  return { type: DO_GET_HOME_TEXT };
 }
 
-export function setApiResponse(data) {
-  return { type: SET_API_RESPONSE, data };
+export function setHomeText(data) {
+  return { type: SET_HOME_TEXT, data };
 }
