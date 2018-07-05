@@ -3,7 +3,7 @@ import {
 } from '../api';
 
 const TEXT_PATHS = {
-  aboutMe: '/sections-text/about-me.md',
+  aboutMe: '/home-sections/about-me.md',
 };
 
 export async function getHomeText() {
@@ -17,4 +17,12 @@ export async function getHomeText() {
       [key]: results[index],
     };
   }, {});
+}
+
+export function getClients() {
+  return GET('/clients/index.json');
+}
+
+export function getNav() {
+  return GET('/home-sections/index.json');
 }

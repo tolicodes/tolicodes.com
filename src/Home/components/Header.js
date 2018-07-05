@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import autoBind from 'react-autobind';
+import GithubCorner from 'react-github-corner';
+import ReactTooltip from 'react-tooltip';
 
 import {
   FileDownload,
   Email,
-  Menu,
 } from 'styled-icons/material';
 
 import {
@@ -13,7 +14,15 @@ import {
   Linkedin
 } from 'styled-icons/fa-brands';
 
-import SideMenu from './SideMenu';
+import {
+  ChalkboardTeacher,
+} from 'styled-icons/fa-solid/';
+
+import {
+  Button,
+} from '../styles';
+
+import NavMenu from './NavMenu';
 
 const MOBILE_BREAKPOINT = 768;
 const ICON_SIZE = 13
@@ -23,11 +32,63 @@ const Wrapper = styled.header`
   background-color: #db573e;
 `;
 
-const MenuButton = styled(Menu)`
+const MenuButton = styled.div`
+  width: 60px;
+  height: 45px;
+  transform: scale(.7);
+  transition: .5s ease-in-out;
   cursor: pointer;
-  position: absolute;
-  left: 15px;
-  color: #006978;
+  z-index: 1000;
+
+  position: fixed;
+  left: 20px;
+
+  & span {
+    display: block;
+    position: absolute;
+    height: 9px;
+    width: 100%;
+    background: black;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+  }
+
+  & span:nth-child(1) {
+    top: 0px;
+  }
+
+  & span:nth-child(2), & span:nth-child(3) {
+    top: 18px;
+  }
+
+  & span:nth-child(4) {
+    top: 36px;
+  }
+
+  ${({ menuOpen }) => menuOpen && css`
+    & span:nth-child(1) {
+      top: 18px;
+      width: 0%;
+      left: 50%;
+    }
+
+    & span:nth-child(2) {
+      transform: rotate(45deg);
+    }
+
+    & span:nth-child(3) {
+      transform: rotate(-45deg);
+    }
+
+    & span:nth-child(4) {
+      top: 18px;
+      width: 0%;
+      left: 50%;
+    }
+  `}
 `;
 
 const Title = styled.h1`
@@ -49,26 +110,10 @@ const Links = styled.div`
   display: flex;
 `;
 
-const Link = styled.a`
-  display: flex;
-  flex: 25%;
-
-  justify-content: center;
-  align-content: center;
+const Link = styled(Button.withComponent('a'))`
+  flex: 1;
 
   margin-right: 20px;
-  border-radius: 2px;
-  border: none;
-
-  padding: 8px 16px;
-
-  background-color: #0097a7;
-  color: white;
-
-  text-decoration: none;
-
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
-
   &:last-child {
     margin-right: 0;
   }
@@ -104,14 +149,31 @@ export default class Header extends Component {
 
   render() {
     const {
-      menuOpen
+      menuOpen,
     } = this.state;
+
+    const {
+      nav,
+    } = this.props;
 
     return (
       <Wrapper>
-        { menuOpen && <SideMenu open={menuOpen}/> }
+        <GithubCorner
+          data-place="left"
+          data-tip="View the Source Code for this site on GitHub!"
+          href="https://github.com/tolicodes/tolicodes.com"
+        />
 
-        <MenuButton size={50} onClick={this.onClickMenuButton} />
+        <ReactTooltip/>
+
+        <NavMenu isOpen={menuOpen} onHide={this.onClickMenuButton} nav={nav} />
+
+        <MenuButton onClick={this.onClickMenuButton} menuOpen={menuOpen}>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </MenuButton>
 
         <Title>@tolicodes</Title>
         <Subtitle>Anatoliy D. Zaslavskiy</Subtitle>
@@ -129,6 +191,15 @@ export default class Header extends Component {
           <Link href="http://linkedin.com/in/tolicodes" target="_blank">
             <Linkedin size={ICON_SIZE} />
             <LinkLabel>LinkedIn</LinkLabel>
+          </Link>
+
+          <Link
+            href="https://www.codementor.io/tolicodes/reviews"
+            target="_blank"
+            data-tip="Read what real clients have to say about me"
+          >
+            <ChalkboardTeacher size={ICON_SIZE} />
+            <LinkLabel>CodeMentor</LinkLabel>
           </Link>
 
           <Link href="mailto:toli@tolicodes.com" target="_blank">

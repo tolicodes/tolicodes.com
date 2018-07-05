@@ -22,10 +22,10 @@ const YouTubeWrapper = styled.div`
   height: 0;
 `;
 
-export default () => (
-  <MainSection id="my-story">
+export default ({ title, path }) => (
+  <MainSection id={path}>
     <Heading>
-      Watch My Story
+      { title }
     </Heading>
     <YouTubeWrapper>
       <FullWidthYouTube

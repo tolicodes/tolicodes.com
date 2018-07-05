@@ -2,7 +2,7 @@ import React from 'react';
 
 import {
   Heading,
-  MainSection,
+  AltSection,
   Slide,
   SlideImage,
 } from '../styles';
@@ -10,15 +10,15 @@ import {
 import ny from '../assets/ny.jpg';
 import sf from '../assets/sf.jpg';
 
-export default () => (
-  <MainSection id="ny-to-sf">
+export default ({ title, path }) => (
+  <AltSection id={path}>
     <Heading>
-      NY -> SF Transplant
+      { title }
     </Heading>
 
     <Slide>
       <SlideImage src={ny} />
       <SlideImage src={sf} />
     </Slide>
-  </MainSection>
+  </AltSection>
 )

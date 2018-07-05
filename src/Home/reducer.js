@@ -1,24 +1,67 @@
-import update from 'immutability-helper';
+import {
+  without,
+} from 'lodash';
 
 import {
+  SET_CLIENTS,
   SET_HOME_TEXT,
+  SET_NAV,
+  FILTER_CLIENTS,
 } from './actions';
 
 const initialState = {
-  homeText: null,
+  homeText: {},
+  clients: [],
+  nav: [],
+  clientFilters: {
+    tag: [],
+    tech: [],
+  }
 };
 
-export default function (state = initialState, action) {
-  switch (action.type) {
+export default function (state = initialState, { type, data, ...rest }) {
+  switch (type) {
     case SET_HOME_TEXT: {
-      return update(
-        state,
-        {
-          homeText: {
-            $set: action.data,
-          }
-        }
-      );
+      return {
+        ...state,
+        homeText: data,
+      };
+    }
+
+    case SET_CLIENTS: {
+      return {
+        ...state,
+        clients: data,
+      }
+    }
+
+    case SET_NAV: {
+      return {
+        ...state,
+        nav: data,
+      }
+    }
+
+    case FILTER_CLIENTS: {
+      const {
+        filterType,
+        tag,
+      } = rest;
+
+      const filters = {
+        ...state.clientFilters,
+      };
+
+      if (filters[filterType].includes(tag)) {
+        filters[filterType] = without(filters[filterType], tag);
+      } else {
+        filters[filterType] = [...filters[filterType], tag];
+      }
+
+      return {
+        ...state,
+        clientFilters: filters,
+      }
     }
 
     default: {

@@ -7,10 +7,10 @@ import {
   CenterContainer,
 } from '../styles';
 
-export default ({ text }) => (
-  <AltSection id="about-me">
+export default ({ text, title, path }) => (
+  <AltSection id={path}>
     <Heading>
-      About Me
+      { title }
     </Heading>
 
     <CenterContainer>
