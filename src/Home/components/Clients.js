@@ -10,7 +10,7 @@ import {
   intersection,
 } from 'lodash';
 
-import FilterClientsButtons from './FilterClientsButtons';
+import FilterClientsButtons, { FILTER_TYPES } from './FilterClientsButtons';
 
 const Logos = styled.div`
   display: flex;
@@ -44,15 +44,15 @@ const LogoImage = styled.img`
   cursor: pointer;
 `;
 
-function isClientShown(clientFilters, { tags, tech }) {
-  const tagFilters = clientFilters.tag;
-  const techFilters = clientFilters.tech;
+function isClientShown(clientFilters, tags) {
+  return Object.keys(FILTER_TYPES).reduce((shown, filterType) => {
+    if (!shown) return false;
 
-  const tagPasses = tagFilters.length === 0 || intersection(tagFilters, tags).length;
-  const techPasses = techFilters.length === 0 || intersection(techFilters, tech).length;
-
-  console.log(tagPasses, techPasses);
-  return tagPasses && techPasses;
+    return (
+      !clientFilters[filterType].length ||
+      intersection(clientFilters[filterType], tags[filterType]).length
+    );
+  }, true);
 }
 
 export default ({
@@ -75,12 +75,12 @@ export default ({
 
     <Logos>
       {clients && clientFilters ?
-        clients.map(({ img, url, tags, tech }) => (
+        clients.map(({ img, url, ...filters }) => (
           <LogoLink
             href={url}
             target="_blank"
             key={url}
-            isShown={isClientShown(clientFilters, { tags, tech })}
+            isShown={isClientShown(clientFilters, filters)}
           >
             <LogoImage src={img} />
           </LogoLink>

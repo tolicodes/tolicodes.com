@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import styled, { css } from 'styled-components';
 import {
-  map,
-  flatten,
-  uniq,
-  compact,
+  chain,
 } from 'lodash';
 import autoBind from 'react-autobind';
 
@@ -19,7 +16,7 @@ const Wrapper = styled.div`
 
 const Container = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 
   align-items: center;
   margin-bottom: 20px;
@@ -27,7 +24,7 @@ const Container = styled.div`
 
 const ButtonsContainer = styled.div`
   display: flex;
-  flex: 1;
+  width: 100%;
   padding-bottom: 10px;
 
   overflow-x: scroll;
@@ -45,6 +42,7 @@ const ButtonsContainer = styled.div`
   /* Handle */
   ::-webkit-scrollbar-thumb {
     background: #0097a7;
+    cursor: pointer;
   }
 `;
 
@@ -66,9 +64,14 @@ const FilterButtonComponent = styled(Button)`
 `;
 
 const Title = styled.strong`
-  min-width: 100px;
-  margin-right: 20px;
+  margin-bottom: 10px;
 `;
+
+export const FILTER_TYPES = {
+  tech: 'Tech',
+  tag: 'Type',
+  industry: 'Industry',
+};
 
 class FilterButton extends Component {
   constructor() {
@@ -96,8 +99,18 @@ class FilterButton extends Component {
 }
 
 export default class FilterClientsButtons extends Component {
-  extractTagList(clients, field) {
-    return compact(uniq(flatten(map(clients, field))));
+  extractTagList(clients, filterType) {
+    return (
+      chain(clients)
+        .map(filterType)
+        .flatten()
+        .compact()
+        .countBy()
+        .toPairs()
+        .sortBy(([, count]) => -count)
+        .map(([tag]) => tag)
+        .value()
+    );
   }
 
   render() {
@@ -113,52 +126,33 @@ export default class FilterClientsButtons extends Component {
       );
     }
 
-    const tags = this.extractTagList(clients, 'tags');
-    const tech = this.extractTagList(clients, 'tech');
-
-    const filtersOn = {
-      tag: !!clientFilters.tag.length,
-      tech: !!clientFilters.tech.length,
-    };
-
     return (
       <Wrapper>
         <CenterContainer>
-          <Container>
-            <Title>
-              Filter by Type:
-            </Title>
+          {
+            Object.entries(FILTER_TYPES).map(([filterType, label]) => (
+              <Container key={filterType}>
+                <Title>
+                  Filter by {label} (Scroll):
+                </Title>
 
-            <ButtonsContainer>
-              {tags.map(tag => (
-                <FilterButton
-                  key={tag}
-                  tag={tag}
-                  type="tag"
-                  isOff={filtersOn.tag && !clientFilters.tag.includes(tag)}
-                  onClick={filterClients}
-                />
-              ))}
-            </ButtonsContainer>
-          </Container>
-
-          <Container>
-            <Title>
-              Filter by Tech:
-            </Title>
-
-            <ButtonsContainer>
-            {tech.map(tag => (
-              <FilterButton
-                key={tag}
-                tag={tag}
-                type="tech"
-                isOff={filtersOn.tech && !clientFilters.tech.includes(tag)}
-                onClick={filterClients}
-              />
-            ))}
-            </ButtonsContainer>
-          </Container>
+                <ButtonsContainer>
+                  {this.extractTagList(clients, filterType).map(tag => (
+                    <FilterButton
+                      key={tag}
+                      tag={tag}
+                      type={filterType}
+                      isOff={(
+                        clientFilters[filterType].length &&
+                        !clientFilters[filterType].includes(tag)
+                      )}
+                      onClick={filterClients}
+                    />
+                  ))}
+                </ButtonsContainer>
+              </Container>
+            ))
+          }
         </CenterContainer>
       </Wrapper>
     );

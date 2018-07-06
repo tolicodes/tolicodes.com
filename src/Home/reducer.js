@@ -16,6 +16,7 @@ const initialState = {
   clientFilters: {
     tag: [],
     tech: [],
+    industry: [],
   }
 };
 

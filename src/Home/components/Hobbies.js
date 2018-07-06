@@ -26,6 +26,7 @@ export default ({ title, path }) => (
 
     <Slide>
       <SlideImage src={hiking} />
+
       <SlideTextContainer>
         <SlideText>
           <SlideHeading>Nature</SlideHeading>
@@ -35,15 +36,15 @@ export default ({ title, path }) => (
     </Slide>
 
     <Slide>
-      <SlideTextContainer left={true}>
+      <SlideImage src={aspergers_speech} />
+
+      <SlideTextContainer>
         <SlideText>
-          <SlideHeading>Public Speaking</SlideHeading>
-          I go to ToastMasters every Tuesday.
+          <SlideHeading>Mental Health Education</SlideHeading>
+          As someone afflicted by Aspergers and Bipolar Disorder I am passionate about helping promote a positive image of mental health and promoting education on dealing with these conditions.
 
         </SlideText>
       </SlideTextContainer>
-
-      <SlideImage src={aspergers_speech} />
     </Slide>
 
     <Slide>
@@ -51,15 +52,17 @@ export default ({ title, path }) => (
 
       <SlideTextContainer>
         <SlideText>
-          <SlideHeading>Dogs</SlideHeading>
-          I am a huge dog fan. I volunteered with many organizations for animal welfare.
+          <SlideHeading>Animal Welfare</SlideHeading>
+          I am a big supporter on Animal Right and Animal welfare. I am involved with/volunteer with many organizations promoting animal welfare including BARC, Animal Haven, and Bidawee.
 
         </SlideText>
       </SlideTextContainer>
     </Slide>
 
     <Slide>
-      <SlideTextContainer left={true}>
+      <SlideImage src={acro} />
+
+      <SlideTextContainer>
         <SlideText>
           <SlideHeading>AcroYoga</SlideHeading>
           A mix of acrobatics and yoga.
@@ -67,7 +70,7 @@ export default ({ title, path }) => (
         </SlideText>
       </SlideTextContainer>
 
-      <SlideImage src={acro} />
+
     </Slide>
 
     <Slide>
@@ -83,15 +86,15 @@ export default ({ title, path }) => (
     </Slide>
 
     <Slide>
-      <SlideTextContainer left={true}>
+      <SlideImage src={toastmasters} />
+
+      <SlideTextContainer>
         <SlideText>
           <SlideHeading>ToastMasters</SlideHeading>
-          Club for public speaking
+          I am aiming to become a great public speaker. ToastMasters is a weekly club that allows members to practice speaking, with constructive feedback.
 
         </SlideText>
       </SlideTextContainer>
-
-      <SlideImage src={toastmasters} />
     </Slide>
 
     <Slide>

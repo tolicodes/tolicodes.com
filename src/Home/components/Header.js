@@ -24,7 +24,6 @@ import {
 
 import NavMenu from './NavMenu';
 
-const MOBILE_BREAKPOINT = 768;
 const ICON_SIZE = 13
 
 const Wrapper = styled.header`
@@ -92,12 +91,13 @@ const MenuButton = styled.div`
 `;
 
 const Title = styled.h1`
-  font-family: 'Wendy One', sans-serif;
+  font-family: 'Space Mono', sans-serif;
   margin: 0;
   font-size: 40px;
 `;
 
 const Subtitle = styled.h4`
+  font-family: 'Space Mono', sans-serif;
   margin: 0;
   font-size: 16px;
 `;
@@ -123,7 +123,7 @@ const LinkLabel = styled.span`
   display: inline-block;
   margin-left: 5px;
 
-  @media(max-width: ${MOBILE_BREAKPOINT}px) {
+  @media(max-width: ${process.env.REACT_APP_MOBILE_BREAKPOINT}px) {
     display: none;
   }
 `;

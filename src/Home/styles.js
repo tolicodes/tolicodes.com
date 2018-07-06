@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import ReactMarkdown from 'react-markdown';
 
 export const Section = styled.section`
   padding-top: 20px;
@@ -17,16 +18,16 @@ export const AltSection = styled(Section)`
 export const Heading = styled.h1`
   margin: 0;
   margin-bottom: 15px;
-  font-family: 'Anton', sans-serif;
+  font-family: 'Space Mono', sans-serif;
   font-size: 30px;
 `;
 
 export const CenterContainer = styled.div`
-  max-width: 780px;
+  max-width: ${process.env.REACT_APP_MOBILE_BREAKPOINT-20*2}px;
   padding: 0 20px;
   margin: 0 auto;
 
-  text-align: justify;
+  text-align: left;
 `;
 
 export const Slide = styled.div`
@@ -34,20 +35,39 @@ export const Slide = styled.div`
   display: flex;
   align-items: flex-start;
   overflow: hidden;
+
+  &:nth-child(odd) {
+    flex-direction: row-reverse;
+  }
+
+  @media(max-width: ${process.env.REACT_APP_MOBILE_BREAKPOINT}px) {
+    display: block;
+  }
 `;
 
 export const SlideImage = styled.img`
   width: 50%;
   height: auto;
+
+  @media(max-width: ${process.env.REACT_APP_MOBILE_BREAKPOINT}px) {
+    width: 100%;
+  }
 `;
 
 export const SlideTextContainer = styled.div`
   display: flex;
   width: 50%;
 
-  ${({ left }) => css`
-    justify-content: ${left ? 'flex-end' : 'flex-start'};
-  `}
+  justify-content: flex-start;
+
+  ${Slide}:nth-child(odd) & {
+    justify-content: flex-end;
+  }
+
+  @media(max-width: ${process.env.REACT_APP_MOBILE_BREAKPOINT}px) {
+    width: 100%;
+    padding-bottom: 20px;
+  }
 `;
 
 export const SlideText = styled.div`
@@ -58,6 +78,10 @@ export const SlideText = styled.div`
 
   padding-bottom: 99999px;
   margin-bottom: -99999px;
+
+  @media(max-width: ${768}px) {
+    width: 100%;
+  }
 `;
 
 export const SlideHeading = styled.h2`
@@ -90,8 +114,14 @@ export const buttonStyles = css`
   &:hover {
     box-shadow: none;
   }
-`
+`;
 
 export const Button = styled.button`
   ${buttonStyles};
+`;
+
+export const MarkdownContainer = styled(ReactMarkdown)`
+  a {
+    color: #db573e;
+  }
 `;

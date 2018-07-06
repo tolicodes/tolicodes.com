@@ -1,10 +1,10 @@
 import React from 'react';
-import ReactMarkdown from 'react-markdown';
 
 import {
   AltSection,
   Heading,
   CenterContainer,
+  MarkdownContainer,
 } from '../styles';
 
 export default ({ text, title, path }) => (
@@ -14,7 +14,7 @@ export default ({ text, title, path }) => (
     </Heading>
 
     <CenterContainer>
-      <ReactMarkdown source={text} />
+      <MarkdownContainer source={text} />
     </CenterContainer>
   </AltSection>
 )
