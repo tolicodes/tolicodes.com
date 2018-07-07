@@ -4,6 +4,7 @@ import autoBind from 'react-autobind';
 import { connect } from 'react-redux';
 import { find } from 'lodash';
 import { bindActionCreators } from 'redux';
+import PropTypes from 'prop-types';
 
 import AboutMe from './components/AboutMe';
 import Header from './components/Header';
@@ -62,7 +63,7 @@ class Home extends Component {
       homeText,
       clients,
       nav,
-      
+
       clientFilters,
 
       filterClients,
@@ -90,13 +91,38 @@ class Home extends Component {
   }
 }
 
+Home.propTypes = {
+  homeText: PropTypes.objectOf(PropTypes.string).isRequired,
+  clients: PropTypes.arrayOf(PropTypes.shape({
+    img: PropTypes.string.isRequired,
+    url: PropTypes.string.isRequired,
+    tag: PropTypes.arrayOf(PropTypes.string),
+    industry: PropTypes.arrayOf(PropTypes.string),
+    tech: PropTypes.arrayOf(PropTypes.string),
+  })).isRequired,
+  nav: PropTypes.arrayOf(PropTypes.shape({
+    path: PropTypes.string,
+    title: PropTypes.string,
+    icon: PropTypes.string,
+  })).isRequired,
+  clientFilters: PropTypes.shape({
+    tag: PropTypes.arrayOf(PropTypes.string),
+    tech: PropTypes.arrayOf(PropTypes.string),
+    industry: PropTypes.arrayOf(PropTypes.string),
+  }).isRequired,
+
+  filterClients: PropTypes.func.isRequired,
+};
+
 export default connect(
-  ({ home: {
-    homeText,
-    clients,
-    nav,
-    clientFilters,
-  }}) => ({
+  ({
+    home: {
+      homeText,
+      clients,
+      nav,
+      clientFilters,
+    },
+  }) => ({
     homeText,
     clients,
     nav,

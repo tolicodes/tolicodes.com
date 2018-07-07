@@ -35,7 +35,7 @@ function* selectPathName() {
 
 function* apiRequest(getter, setter) {
   const res = yield handleError(() => getter());
-  if(res) yield put(setter(res));
+  if (res) yield put(setter(res));
 }
 
 function* onDoGetHomeText() {

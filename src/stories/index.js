@@ -5,6 +5,4 @@ import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
 
 storiesOf('HeaderButtons', module)
-  .add('normal', () => {
-    return <div></div>
-  })
+  .add('normal', () => <div />);

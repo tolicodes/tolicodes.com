@@ -39,9 +39,9 @@ sagaMiddleware.run(saga);
 ReactDOM.render(
   <Provider store={store}>
     <ConnectedRouter history={history}>
-      <Routes/>
+      <Routes />
     </ConnectedRouter>
-  </Provider>
-  ,document.getElementById('root')
+  </Provider>,
+  document.getElementById('root'),
 );
 registerServiceWorker();

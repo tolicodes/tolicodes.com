@@ -7,7 +7,7 @@ async function api(path, data, method = 'GET', { type = 'json', ...extraParams }
   let params = '';
 
   if (['GET', 'DELETE'].includes(method)) {
-    params = '?' + stringify(data);
+    params = `?${stringify(data)}`;
   } else {
     reqBody = JSON.stringify(data);
   }
@@ -75,9 +75,13 @@ export async function handleError(code, { silent } = {}) {
     return response;
   } catch (e) {
     // replace with something...prettier
+    // eslint-disable-next-line
     console.error(e);
     if (!silent) {
+      // eslint-disable-next-line
       alert(e);
     }
+
+    return null;
   }
 }

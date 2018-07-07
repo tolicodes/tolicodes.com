@@ -17,7 +17,7 @@ const initialState = {
     tag: [],
     tech: [],
     industry: [],
-  }
+  },
 };
 
 export default function (state = initialState, { type, data, ...rest }) {
@@ -33,14 +33,14 @@ export default function (state = initialState, { type, data, ...rest }) {
       return {
         ...state,
         clients: data,
-      }
+      };
     }
 
     case SET_NAV: {
       return {
         ...state,
         nav: data,
-      }
+      };
     }
 
     case FILTER_CLIENTS: {
@@ -62,7 +62,7 @@ export default function (state = initialState, { type, data, ...rest }) {
       return {
         ...state,
         clientFilters: filters,
-      }
+      };
     }
 
     default: {

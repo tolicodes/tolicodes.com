@@ -23,7 +23,7 @@ export const Heading = styled.h1`
 `;
 
 export const CenterContainer = styled.div`
-  max-width: ${process.env.REACT_APP_MOBILE_BREAKPOINT-20*2}px;
+  max-width: ${process.env.REACT_APP_MOBILE_BREAKPOINT - 20 * 2}px;
   padding: 0 20px;
   margin: 0 auto;
 

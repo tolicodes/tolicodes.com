@@ -1,6 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import Scrollchor from 'react-scrollchor';
+import PropTypes from 'prop-types';
 
 import {
   Youtube,
@@ -16,12 +17,11 @@ import {
 } from 'styled-icons/material';
 
 import {
-  BasketballBall
+  BasketballBall,
 } from 'styled-icons/fa-solid';
 
-import {
-  buttonStyles,
-} from '../styles';
+import { buttonStyles } from '../../styles';
+import Loading from '../../../common/Loading';
 
 const ICONS = {
   youtube: Youtube,
@@ -72,21 +72,37 @@ const NavLabel = styled.span`
 
 const ICON_SIZE = 14;
 
-export default ({ onHide, isOpen, nav = [] }) => (
-  <Wrapper onClick={onHide} isOpen={isOpen}>
-    {
-      nav.map(({ title, path, icon }) => {
-        const Icon = ICONS[icon];
+const NavMenu = ({ onHide, isOpen, nav = [] }) => (
+  nav
+    ? (
+      <Wrapper onClick={onHide} isOpen={isOpen}>
+        {
+        nav.map(({ title, path, icon }) => {
+          const Icon = ICONS[icon];
 
-        return (
-          <SidebarLink to={path} key={path}>
-            <Icon size={ICON_SIZE}/>
-            <NavLabel>
-              { title }
-            </NavLabel>
-          </SidebarLink>
-        )
-      })
-    }
-  </Wrapper>
+          return (
+            <SidebarLink to={path} key={path}>
+              <Icon size={ICON_SIZE} />
+              <NavLabel>
+                { title }
+              </NavLabel>
+            </SidebarLink>
+          );
+        })
+      }
+      </Wrapper>
+    )
+    : <Loading />
 );
+
+NavMenu.propTypes = {
+  onHide: PropTypes.func.isRequired,
+  isOpen: PropTypes.bool.isRequired,
+  nav: PropTypes.arrayOf(PropTypes.shape({
+    path: PropTypes.string,
+    title: PropTypes.string,
+    icon: PropTypes.string,
+  })).isRequired,
+};
+
+export default NavMenu;

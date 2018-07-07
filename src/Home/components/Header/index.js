@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components';
 import autoBind from 'react-autobind';
 import GithubCorner from 'react-github-corner';
 import ReactTooltip from 'react-tooltip';
+import PropTypes from 'prop-types';
 
 import {
   FileDownload,
@@ -11,20 +12,20 @@ import {
 
 import {
   Github,
-  Linkedin
+  Linkedin,
 } from 'styled-icons/fa-brands';
 
 import {
   ChalkboardTeacher,
-} from 'styled-icons/fa-solid/';
+} from 'styled-icons/fa-solid';
 
 import {
   Button,
-} from '../styles';
+} from '../../styles';
 
 import NavMenu from './NavMenu';
 
-const ICON_SIZE = 13
+const ICON_SIZE = 13;
 
 const Wrapper = styled.header`
   padding: 20px 0;
@@ -133,17 +134,20 @@ export default class Header extends Component {
     super();
 
     this.state = {
-      menuOpen: false
+      menuOpen: false,
     };
 
     autoBind(this);
   }
 
   onClickMenuButton() {
-    this.setState({
-      menuOpen: !this.state.menuOpen,
-    }, () => {
-      this.props.onMenuToggle(this.state.menuOpen);
+    const { onMenuToggle } = this.props;
+
+    this.setState(({ menuOpen }) => ({
+      menuOpen: !menuOpen,
+    }), () => {
+      const { menuOpen } = this.state;
+      onMenuToggle(menuOpen);
     });
   }
 
@@ -164,33 +168,43 @@ export default class Header extends Component {
           href="https://github.com/tolicodes/tolicodes.com"
         />
 
-        <ReactTooltip/>
+        <ReactTooltip />
 
         <NavMenu isOpen={menuOpen} onHide={this.onClickMenuButton} nav={nav} />
 
         <MenuButton onClick={this.onClickMenuButton} menuOpen={menuOpen}>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
+          <span />
+          <span />
+          <span />
+          <span />
         </MenuButton>
 
-        <Title>@tolicodes</Title>
-        <Subtitle>Anatoliy D. Zaslavskiy</Subtitle>
+        <Title>
+          @tolicodes
+        </Title>
+        <Subtitle>
+          Anatoliy D. Zaslavskiy
+        </Subtitle>
         <Links>
           <Link href="/resume.pdf">
             <FileDownload size={ICON_SIZE} />
-            <LinkLabel>Resume</LinkLabel>
+            <LinkLabel>
+              Resume
+            </LinkLabel>
           </Link>
 
           <Link href="http://github.com/tolicodes" target="_blank">
             <Github size={ICON_SIZE} />
-            <LinkLabel>Github</LinkLabel>
+            <LinkLabel>
+              Github
+            </LinkLabel>
           </Link>
 
           <Link href="http://linkedin.com/in/tolicodes" target="_blank">
             <Linkedin size={ICON_SIZE} />
-            <LinkLabel>LinkedIn</LinkLabel>
+            <LinkLabel>
+              LinkedIn
+            </LinkLabel>
           </Link>
 
           <Link
@@ -199,15 +213,29 @@ export default class Header extends Component {
             data-tip="Read what real clients have to say about me"
           >
             <ChalkboardTeacher size={ICON_SIZE} />
-            <LinkLabel>CodeMentor</LinkLabel>
+            <LinkLabel>
+              CodeMentor
+            </LinkLabel>
           </Link>
 
           <Link href="mailto:toli@tolicodes.com" target="_blank">
             <Email size={ICON_SIZE} />
-            <LinkLabel>toli@tolicodes.com</LinkLabel>
+            <LinkLabel>
+              toli@tolicodes.com
+            </LinkLabel>
           </Link>
         </Links>
       </Wrapper>
-    )
+    );
   }
 }
+
+Header.propTypes = {
+  nav: PropTypes.arrayOf(PropTypes.shape({
+    path: PropTypes.string,
+    title: PropTypes.string,
+    icon: PropTypes.string,
+  })).isRequired,
+
+  onMenuToggle: PropTypes.func.isRequired,
+};
