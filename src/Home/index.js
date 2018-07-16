@@ -12,6 +12,7 @@ import WatchMyStory from './components/WatchMyStory';
 import NYSFTransplant from './components/NYSFTransplant';
 import Hobbies from './components/Hobbies';
 import Clients from './components/Clients';
+import Schedule from './components/Schedule';
 
 import {
   filterClients,
@@ -85,6 +86,7 @@ class Home extends Component {
           {...this.getNavPropsForSection('clients')}
         />
         <NYSFTransplant {...this.getNavPropsForSection('ny-to-sf')} />
+        <Schedule />
         <Hobbies {...this.getNavPropsForSection('hobbies')} />
       </Wrapper>
     );
