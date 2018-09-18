@@ -1,0 +1,303 @@
+[{
+    "person": "Aleks F",
+    "company": "Agorafy",
+    "company_url": "http://agorafy.com",
+    "person_url": "https://www.linkedin.com/in/fuzaylov/",
+    "company_image": "agorafy.png",
+    "recommendation": "Anatoliy (or Toli as we called him at Agorafy) was a joy to work with. He's great for moral and will always pick you up when you're down. Great team player and very knowledgable engineer. He's always smiling and he will make sure you are too! Our daily pool games, exercises and vodka shots are unforgettable.",
+    "relationship": "Senior",
+    "source": "LinkedIn",
+    "source_url": "https://www.linkedin.com/in/tolicodes/",
+    "tags": ["Frontend", "Lead Developer"]
+}, {
+    "person": "Darby McHugh",
+    "company": "BadDogBling",
+    "person_url": "https://www.linkedin.com/in/darbymchugh",
+    "person_image": "https://media.licdn.com/dms/image/C4E03AQFTlPOEXJN1vw/profile-displayphoto-shrink_100_100/0?e=1542844800&v=beta&t=JKzeFJYioP5yVZo0dVd2YjoT_N48JdlLsrQ8nuMQ0Q4",
+    "company_url": "http://www.sartinidesigns.com/bad-dog-bling/",
+    "recommendation": "Anatoliy is very knowledgeable and also fun to work with. His expertise is vast - he is not only a technical/computer genius but also has expertise in marketing, strategy, and financing. He is thoughtful, thorough, creative and generous with his time. He helped us brainstorm ways of launching our product and advised us on the financial aspects of growing the brand. He is a go to guy for business startup expertise.",
+    "relationship": "Freelance Client",
+    "source": "LinkedIn",
+    "source_url": "https://www.linkedin.com/in/tolicodes/",
+    "tags": ["Consulting", "Startup Advice"]
+}, {
+    "person": "Seth Maxwell",
+    "company": "Preminder",
+    "person_image": "https://media.licdn.com/dms/image/C4E03AQFTlPOEXJN1vw/profile-displayphoto-shrink_100_100/0?e=1542844800&v=beta&t=JKzeFJYioP5yVZo0dVd2YjoT_N48JdlLsrQ8nuMQ0Q4",
+    "company_url": "http://preminder.md/",
+    "company_image": "preminder.png",
+    "recommendation": "Based on my experience working with him, Anatoliy would be an asset to any IT project both when it comes to building a product and when it comes to pitching it.",
+    "relationship": "Boss",
+    "source": "LinkedIn",
+    "source_url": "https://www.linkedin.com/in/tolicodes/",
+    "tags": ["Startup", "Frontend", "Backend", "Visualization", "Prototyping", "Early Stage"]
+}, {
+    "person": "Wayne Chan",
+    "company": "Even Financial",
+    "person_image": "https://media.licdn.com/dms/image/C5603AQF6mIXY8IprFw/profile-displayphoto-shrink_100_100/0?e=1542844800&v=beta&t=rDbEZ61myI_boZcwEurfFOctmR2FfZOedLD1kipZ1w4",
+    "company_url": "http://evenfinancial.com/",
+    "company_image": "evenfinancial.png",
+    "relationship": "Coworker",
+    "source": "LinkedIn",
+    "source_url": "https://www.linkedin.com/in/tolicodes/",
+    "tags": ["Startup", "Frontend", "Prototyping", "Financial"]
+}, {
+    "person": "Minh Mai",
+    "company": "0ptimus",
+    "person_image": "https://media.licdn.com/dms/image/C5603AQE2MzUa4N0xdA/profile-displayphoto-shrink_100_100/0?e=1542844800&v=beta&t=I_i9DsKFAX2WDpUCGtP2xhtx8OghQlDpr1dleHm_PP8",
+    "company_url": "https://0ptimus.com/",
+    "company_image": "0ptimus.png",
+    "recommendation": "We hired Toli to help us engineer a front end for a web app. Through the first few iterations, we saw how valuable his work was and how fast he was able to solve problems that were outside his area of expertise. This led us to work with Toli in a more official capacity where he helped us architect a system that is now a main component of our data product. I can't recommend Toli enough. He is quick to adapt and understand our problems and is always accommodating in terms of scheduling appointments (because hours can get pretty weird in start-ups)! If you want someone who won't run your billables and get results quickly, you should reach out to Toli. My only regret is that we don't have more projects for Toli to help us out on.",
+    "relationship": "Client",
+    "source": "LinkedIn",
+    "source_url": "https://www.linkedin.com/in/tolicodes/",
+    "tags": ["Frontend", "Prototyping", "Mapping", "Visualization", "Politics"]
+}, {
+    "person": "Daniel Ahmadizadeh",
+    "company": "Riley",
+    "person_image": "https://media.licdn.com/dms/image/C5603AQGq1fj3Bf5MlA/profile-displayphoto-shrink_100_100/0?e=1542844800&v=beta&t=wUMNXrrOPPZbeKzDFI372j-U3txfJfui6tTAhkFt9lU",
+    "company_url": "https://getrileynow.com/",
+    "company_image": "omni.png",
+    "recommendation": "Anatoliy was instrumental in enabling our venture to get off the ground. His advice, mentorship, and assistance particularly in how to optimize our MVP were instrumental. He helped with wireframing and brainstorming our MVP as well. Anatoliy embodies the characteristics that I love in people: humble, honest, and hard working. I am thankful to be able to reach out to Anatoliy in good times and in bad as his expertise/insights have assisted me on many occasions over the years.",
+    "relationship": "Client",
+    "source": "LinkedIn",
+    "source_url": "https://www.linkedin.com/in/tolicodes/",
+    "tags": ["Full Stack", "Prototyping", "Startup", "Early Stage", "Wireframing", "Node"]
+}, {
+    "person": "Tristan Smith",
+    "company": "Percolate",
+    "person_image": "https://media.licdn.com/dms/image/C4E03AQHVy4I-P_1Y2w/profile-displayphoto-shrink_100_100/0?e=1542844800&v=beta&t=76Wf6_Gvf1dwKeWI7tFuM7GKyci0V8vanx8qHggzDCE",
+    "company_url": "https://percolate.com/",
+    "company_image": "percolate.png",
+    "recommendation": "Toli is one of the most knowledgeable and truly detail oriented people I've ever met. He strives for nothing less than perfection in his work, and he encourages all of his fellows colleagues to do the same. Working with Toli made me a better engineer and I value our time working together as colleagues!",
+    "relationship": "Senior",
+    "source": "LinkedIn",
+    "source_url": "https://www.linkedin.com/in/tolicodes/",
+    "tags": ["Front End", "Startup", "Backbone"]
+}, {
+    "person": "Roger Kenny",
+    "company": "WSJ",
+    "person_image": "https://media.licdn.com/dms/image/C4D03AQFOzIHdhfjjiQ/profile-displayphoto-shrink_800_800/0?e=1542844800&v=beta&t=uz7QGC35K9R5baVJbBSa3xRKTBmir44jYq6Q1unHo38",
+    "company_url": "https://wsj.com/",
+    "company_image": "wsj.png",
+    "recommendation": "Anatoliy displayed boundless ability in his skill, and ceaseless dedication to his work. He is a fast learner and problem solver, as well as a fount of programming knowledge. I have witnessed him tirelessly take to a task sized too large, and still deliver all that was asked and more. He is ambitious and eager, and I know he will be a very valuable asset. I would be glad to have him on my team.",
+    "relationship": "Coworker",
+    "source": "LinkedIn",
+    "source_url": "https://www.linkedin.com/in/tolicodes/",
+    "tags": ["Front End", "Enterprise", "Data Visualization", "Media"]
+}, {
+    "person": "Tanmoy Saha",
+    "company": "Forrest Solutions Group",
+    "person_image": "https://media.licdn.com/dms/image/C4D03AQE17qkCh8hpDQ/profile-displayphoto-shrink_100_100/0?e=1542844800&v=beta&t=1qcEDKtfuFNcWvKCYiQZXVOFSDGKh94REbvHMA08Kv0",
+    "company_url": "https://www.forrestsolutions.com/",
+    "recommendation": "At first, I came across Anatoliy's resume and it was interesting. He was doing all kinds of things. So, I invited him to meet me. I was very impressed by his professionalism. I sent him to my client for the PHP role and they decided to hire him the day they met him.  He is very passionate about technologies. I was blown away by his knowledge of PHP and JavaScripts. I speak with developers everyday and not many can articulate like the way he does. He is a true problem solver. Anatoliy is articulate and passionate about programming. I work with some of the best developers in NYC and he is more knowledgeable than many top developers who have been in the arena many more yrs than he has. Although he is more experienced with PHP, he can pick up any language. I was surprised by his knowledge about SDLC and agile mythologies. Most people just like to say they work in agile but do not know what they are talking about. This is not the case for Anatoliy. He is a problem solver and a quick learner. I hope him best of luck. It was a pleasure working with him.",
+    "relationship": "Recruiter",
+    "source": "LinkedIn",
+    "source_url": "https://www.linkedin.com/in/tolicodes/",
+    "tags": ["Recruiter"]
+}, {
+    "person": "David Best",
+    "company": "TheDoctorsChannel",
+    "person_image": "https://media.licdn.com/dms/image/C4E03AQGTtcG7hRyyqw/profile-displayphoto-shrink_100_100/0?e=1542844800&v=beta&t=0iez_C4riBAVaKQDct0aYMR4alw5RWjF7hjDX43vE5A",
+    "company_url": "http://thedoctorschannel.com/",
+    "recommendation": "Anatoliy is a brilliant programmer, mover and shaker. He's also fun to have in the office as he has many interests and a wonderful sense of team spirit.",
+    "relationship": "Boss",
+    "source": "LinkedIn",
+    "source_url": "https://www.linkedin.com/in/tolicodes/",
+    "tags": ["Medical", "Startup", "Frontend", "PHP"]
+}, {
+    "person": "IC Levenberg-Engel",
+    "company": "Bronx Science AnimalRoom",
+    "person_image": "https://media.licdn.com/dms/image/C4E03AQERVf-OW4yOBg/profile-displayphoto-shrink_100_100/0?e=1542844800&v=beta&t=3j2YQmUupKmkajkZ6q0PUfajRi_rusQYrA32pIvQqOs",
+    "person_url": "https://www.linkedin.com/in/iracharles",
+    "company_url": "http://bxscience.edu/",
+    "recommendation": "Anatoliy was not only an exemplary member of the Animal Room Squad, i.e.he helped maintain the living colection in a humane, caring way,he also served to regularly update the ARS Website, www.animalroom.org. He was an expert at adding endless multiples of bells and whistles. Anatoliy also showed leadership abilities as a Science Exposition (Fair) Staff Member",
+    "relationship": "Mentor",
+    "source": "LinkedIn",
+    "source_url": "https://www.linkedin.com/in/tolicodes/",
+    "tags": ["Educational"]
+}, {
+    "person": "Frank Uzzo",
+    "company": "MS 180",
+    "person_url": "https://www.linkedin.com/in/frankuzzos",
+    "company_url": "http://11x180.weebly.com/",
+    "recommendation": "Anatoliy was an honor student when he attended MS 180. He was in the top 1% academically in his graduating class. He had a love of learning and a particular love of technology. Anatoliy was a well rounded student and participated in many school activities. He won many awards in his career at Middle School 180 and participated in many events. He definitely would be an asset to any organization. If you require any additional information, please do not hesitate to contact me.",
+    "relationship": "Mentor",
+    "source": "LinkedIn",
+    "source_url": "https://www.linkedin.com/in/tolicodes/",
+    "tags": ["Educational"]
+}, {
+    "person": "Lonnie Honeycutt",
+    "company": "MeanPC",
+    "person_url": "https://www.linkedin.com/in/lonniehoneycutt",
+    "recommendation": "I hired Anatoliy as a technical reviewer/writer for my website last year. His technical knowledge of a diverse array of computer science disciplines, combined with his enthusiasm and work ethic made his contributions a superb value for my business. I look forward to working with Anatoliy in the future, and highly recommend his services to others.",
+    "relationship": "Mentor",
+    "source": "LinkedIn",
+    "source_url": "https://www.linkedin.com/in/tolicodes/",
+    "tags": ["Technical Writer"]
+}, {
+    "person": "Senia Maymin",
+    "company": "Positive Psycbology News",
+    "person_url": "https://www.linkedin.com/in/seniamaymin",
+    "person_image": "https://media.licdn.com/dms/image/C4E03AQFdbUen0Hvcrg/profile-displayphoto-shrink_100_100/0?e=1542844800&v=beta&t=jJYE8i7hpaZMB5QpM4L24Vn9Q_T0oCRE3e5w9Fp6I0E",
+    "recommendation": "Anatoliy is superb. We needed to move the website PPND (www.PositivePsychologyNews.com) and its sister language sites (Spanish and two versions of Chinese) to a new dedicated server - while upgrading the posting software, dealing with various language encodings, integrating special plugins, and trouble-shooting all the small parts that come up when moving a large site. Anatoliy was a complete professional. He found creative solutions for even the most difficult-seeming tasks. I can count on this guy. I have worked with Anatoliy several times, and will work with him again in the future. He has a great sense of what needs to be done, and a can-do-it ethic second to none. If there's a part of the project that needs to be completed, Anatoliy will do so",
+    "relationship": "Client",
+    "source": "LinkedIn",
+    "source_url": "https://www.linkedin.com/in/tolicodes/",
+    "tags": ["PHP", "Full Stack"]
+}, {
+    "person": "Jade",
+    "recommendation": "He is truly an expert and a great mentor. He is very patient and overall a great guy to work with.",
+    "relationship": "Client",
+    "source": "CodeMentor",
+    "source_url": "https://www.codementor.io/tolicodes/reviews",
+    "tags": ["Data Visualization", "Mentee"]
+}, {
+    "person": "Pawel",
+    "person_image": "https://process.filestackapi.com/cache=expiry:max/resize=width:200/6QMlZy34Ss62mTjWUiD4",
+    "recommendation": "Anatoliy was able to grasp the scope of my project very quickly, point out what worked and what didn't, and point me in the right direction with my project! Thank you!",
+    "relationship": "Client",
+    "source": "CodeMentor",
+    "source_url": "https://www.codementor.io/tolicodes/reviews",
+    "tags": ["Data Visualization", "Mentee"]
+}, {
+    "person": "Taj",
+    "person_image": "https://www.gravatar.com/avatar/870d321eb5d40cd4a73a451517b9377c?d=https%3A%2F%2Fassets.codementor.io%2Favatar%2FT.png&s=200",
+    "recommendation": "Great communication skills, very patient, very knowledgeable! Super knowledgeable, quick, patient to explain things, really knows what he's doing, especially with D3.",
+    "relationship": "Client",
+    "source": "CodeMentor",
+    "source_url": "https://www.codementor.io/tolicodes/reviews",
+    "tags": ["Data Visualization", "Mentee"]
+}, {
+    "person": "Sharad",
+    "recommendation": "Awesome. Has great knowledge of stuff.",
+    "relationship": "Client",
+    "source": "CodeMentor",
+    "source_url": "https://www.codementor.io/tolicodes/reviews",
+    "tags": ["Data Visualization", "Mentee"]
+}, {
+    "person": "Laurie",
+    "recommendation": "Anatoliy did a wonderful job of explaining D3 concepts and helped me clean up and improve the code quality. Terrific explanations and great in depth knowledge.",
+    "relationship": "Client",
+    "source": "CodeMentor",
+    "source_url": "https://www.codementor.io/tolicodes/reviews",
+    "tags": ["Data Visualization", "Mentee"]
+}, {
+    "person": "Jide",
+    "recommendation": "Really great Tutor! He wasted no time at the beginning of the session and he debugged the issue with me to find all the issues with my script. I would definitely work with him again",
+    "relationship": "Client",
+    "source": "CodeMentor",
+    "source_url": "https://www.codementor.io/tolicodes/reviews",
+    "tags": ["Data Visualization", "Mentee"]
+}, {
+    "person": "Shaheen",
+    "recommendation": "Anatoliy was awesome, super calm and methodical, one of the best tutors I've worked with. Anatoliy loves complex problems and doesn't mind breaking into the basics while solving them! Phenomenal as always.",
+    "relationship": "Client",
+    "source": "CodeMentor",
+    "source_url": "https://www.codementor.io/tolicodes/reviews",
+    "tags": ["Data Visualization", "Mentee"]
+}, {
+    "person": "Kim",
+    "recommendation": "Wow, amazing - Anatoliy surpassed all my expectations.",
+    "relationship": "Client",
+    "source": "CodeMentor",
+    "source_url": "https://www.codementor.io/tolicodes/reviews",
+    "tags": ["Data Visualization", "Mentee"]
+}, {
+    "person": "Angelina",
+    "person_image": "https://lh6.googleusercontent.com/-ttxvLYGQW-4/AAAAAAAAAAI/AAAAAAAAADc/0u5EjHUftWQ/photo.jpg",
+    "recommendation": "Anatoliy is really great! super helpful, super nice, hell yeah.",
+    "relationship": "Client",
+    "source": "CodeMentor",
+    "source_url": "https://www.codementor.io/tolicodes/reviews",
+    "tags": ["Data Visualization", "Mentee"]
+}, {
+    "person": "Joshua",
+    "person_image": "https://process.filestackapi.com/cache=expiry:max/resize=width:200/oKonvwflRoWg4pm7fu3F",
+    "recommendation": "Super helpful for thinking through current implementation of my application and suggesting ways to evolve it in the future.",
+    "relationship": "Client",
+    "source": "CodeMentor",
+    "source_url": "https://www.codementor.io/tolicodes/reviews",
+    "tags": ["Data Visualization", "Mentee"]
+}, {
+    "person": "Minh",
+    "person_image": "https://process.filestackapi.com/cache=expiry:max/resize=width:200/bYipdLnQaykFyN6Fibtz",
+    "recommendation": "Toli was helpful throughout the process, with updating me with a new rescheduled time because he was running a bit late to helping me work around the Chrome console. Would hire again!",
+    "relationship": "Client",
+    "source": "CodeMentor",
+    "source_url": "https://www.codementor.io/tolicodes/reviews",
+    "tags": ["Data Visualization", "Mentee"]
+}, {
+    "person": "Jeff",
+    "recommendation": "Fast at helping me get my Javascript example to a working state. Helpful with future suggestions to scale. Will work with him again on this project.",
+    "relationship": "Client",
+    "source": "CodeMentor",
+    "source_url": "https://www.codementor.io/tolicodes/reviews",
+    "tags": ["Data Visualization", "Mentee"]
+}, {
+    "person": "Kevin",
+    "recommendation": "Efficient and extremely knowledgeable. Very impressed.",
+    "relationship": "Client",
+    "source": "CodeMentor",
+    "source_url": "https://www.codementor.io/tolicodes/reviews",
+    "tags": ["Data Visualization", "Mentee"]
+}, {
+    "person": "TJ",
+    "recommendation": "super knowledgable, very organized and detailed, patient, polite, and helped me tremendously",
+    "relationship": "Client",
+    "source": "CodeMentor",
+    "source_url": "https://www.codementor.io/tolicodes/reviews",
+    "tags": ["Data Visualization", "Mentee"]
+}, {
+    "person": "Robert",
+    "recommendation": "Very solid understanding, with limited amount of information. Impressive Knowledge Base",
+    "relationship": "Client",
+    "source": "CodeMentor",
+    "source_url": "https://www.codementor.io/tolicodes/reviews",
+    "tags": ["Data Visualization", "Mentee"]
+}, {
+    "person": "Arjun",
+    "recommendation": "Most Excellent",
+    "relationship": "Client",
+    "source": "CodeMentor",
+    "source_url": "https://www.codementor.io/tolicodes/reviews",
+    "tags": ["Data Visualization", "Mentee"]
+}, {
+    "person": "Laurent",
+    "person_image": "https://www.gravatar.com/avatar/e97477c014af99064967d60be84b114a?d=https%3A%2F%2Fassets.codementor.io%2Favatar%2FL.png&s=200",
+    "recommendation": "Was a pleasure to work with. Explained everything in detail",
+    "relationship": "Client",
+    "source": "CodeMentor",
+    "source_url": "https://www.codementor.io/tolicodes/reviews",
+    "tags": ["Data Visualization", "Mentee"]
+}, {
+    "person": "Chris",
+    "person_image": "https://process.filestackapi.com/cache=expiry:max/resize=width:200/8D3ZAIGoSXSbVqciQCFK",
+    "recommendation": "Super helpful and articulate person - Anatoliy is really good at asking you the right questions to evoke a learning response.",
+    "relationship": "Client",
+    "source": "CodeMentor",
+    "source_url": "https://www.codementor.io/tolicodes/reviews",
+    "tags": ["Data Visualization", "Mentee"]
+}, {
+    "person": "Chase",
+    "person_image": "https://www.gravatar.com/avatar/f442e06d344434d3f5211390b4271e25?d=https%3A%2F%2Fassets.codementor.io%2Favatar%2FC.png&s=200",
+    "recommendation": "Good troubleshooting - helped explain his process as well.",
+    "relationship": "Client",
+    "source": "CodeMentor",
+    "source_url": "https://www.codementor.io/tolicodes/reviews",
+    "tags": ["Data Visualization", "Mentee"]
+}, {
+    "person": "Daniel",
+    "recommendation": "Very knowledgeable and courteous.",
+    "relationship": "Client",
+    "source": "CodeMentor",
+    "source_url": "https://www.codementor.io/tolicodes/reviews",
+    "tags": ["Data Visualization", "Mentee"]
+}, {
+    "person": "John",
+    "recommendation": "super helpful with all things backbone",
+    "relationship": "Client",
+    "source": "CodeMentor",
+    "source_url": "https://www.codementor.io/tolicodes/reviews",
+    "tags": ["Backbone", "Mentee"]
+}]

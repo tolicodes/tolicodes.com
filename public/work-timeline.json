@@ -1,0 +1,26 @@
+[{
+    "start_date": "02-12-2018",
+    "end_date": null,
+    "title": "Senior R&D Frontend Developer",
+    "company": "HOVER Inc",
+    "accomplishments": [
+        "Started R&D Program that including developing multiple open source and internal Pickle.js (a testing framework), Node API Toolkit, and projects dealing with anything from documentation, data querying, visualization and Computer Vision",
+        "Developed complex platform for calculating building material needed for construction and visualizing houses with different materials"
+    ],
+    "projects": [{
+        "name": "PickleJS",
+        "description": "Developed a testing Framework built on top of Cypress",
+        "url": "https://picklejs.com"
+    }]
+}, {
+    "start_date": "06-01-2010",
+    "end_date": null,
+    "title": "President",
+    "company": "Oselot",
+    "accomplishments": [
+        "Programmed, project managed, and led teams for multiple companies including Amex (OPEN application process), Even Financial (client facing calculators and large administrative backend in Angular), 0ptimus (political campaign data visualizations), and Respondent.io (prototyping products). Also did projects in medical data visualization, market research, yoga and finance",
+        "Building pitch decks, participating in client and investor meetings, wireframing in Balsamiq, building process diagrams in LucidCharts, writing functional specifications",
+        "Mentoring startups on CodeMentor (see my reviews!)",
+        "Managing frontend and backend developers in creating enterprise software"
+    ]
+}]
