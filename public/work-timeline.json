@@ -3,6 +3,7 @@
     "end_date": null,
     "title": "Senior R&D Frontend Developer",
     "company": "HOVER Inc",
+    "type": "Full Time",
     "accomplishments": [
         "Started R&D Program that including developing multiple open source and internal Pickle.js (a testing framework), Node API Toolkit, and projects dealing with anything from documentation, data querying, visualization and Computer Vision",
         "Developed complex platform for calculating building material needed for construction and visualizing houses with different materials"
@@ -10,17 +11,193 @@
     "projects": [{
         "name": "PickleJS",
         "description": "Developed a testing Framework built on top of Cypress",
-        "url": "https://picklejs.com"
+        "url": "https://picklejs.com",
+        "image_url": "picklejs.png"
     }]
 }, {
     "start_date": "06-01-2010",
     "end_date": null,
     "title": "President",
     "company": "Oselot",
+    "type": "Own Startup",
     "accomplishments": [
         "Programmed, project managed, and led teams for multiple companies including Amex (OPEN application process), Even Financial (client facing calculators and large administrative backend in Angular), 0ptimus (political campaign data visualizations), and Respondent.io (prototyping products). Also did projects in medical data visualization, market research, yoga and finance",
         "Building pitch decks, participating in client and investor meetings, wireframing in Balsamiq, building process diagrams in LucidCharts, writing functional specifications",
         "Mentoring startups on CodeMentor (see my reviews!)",
         "Managing frontend and backend developers in creating enterprise software"
+    ],
+    "projects": [{
+        "name": "Node API Toolkit",
+        "description": "Toolkit for dealing with Queues, Rate Limiting, Error Handling, Concurrency, and many other problems that come with API Scraping",
+        "url": "http://github.com/tolicodes/node-api-toolkit",
+        "image_url": "node-api-toolkit.png"
+    }, {
+        "name": "Twitter API Toolkit",
+        "description": "Toolkit built on top of Node API Toolkit for dealing with the Twitter API effectively",
+        "url": "http://github.com/tolicodes/twitter-toolkit",
+        "image_url": "twitter-toolkit.png"
+    }]
+}, {
+    "start_date": "04-01-2018",
+    "end_date": null,
+    "title": "Co-Founder",
+    "company": "WeAcro",
+    "type": "Own Startup",
+    "accomplishments": [
+        "Developed an application for the AcroYoga community that allows them to randomize and save AcroYoga poses",
+        "Built application in React",
+        "Currently developing native mobile application in React Native"
+    ],
+    "projects": [{
+        "name": "WeAcro.com",
+        "url": "https://weacro.com",
+        "image_url": "weacro.png"
+    }]
+}, {
+    "start_date": "04-01-2017",
+    "end_date": "10-01-2017",
+    "title": "Marketing Consultant",
+    "company": "NYC AcroFest",
+    "type": "Volunteered",
+    "accomplishments": [
+        "Voluneered by providing Facebook Marketing Advice",
+        "Authored a Facebook marketing plan"
+    ],
+    "projects": [{
+        "name": "Guide to Facebook Marketing",
+        "url": "/projects/AcroFest Marketing Plan.pdf",
+        "description": "A PDF of the Marketing Plan I wrote for AcroFest"
+    }]
+}, {
+    "start_date": "07-01-2017",
+    "end_date": "10-01-2017",
+    "title": "Solution Architect & Technical Account Manager",
+    "company": "Smartly",
+    "type": "Full Time",
+    "accomplishments": [
+        "Provided technical solutions for high value clients, writing detailed reports on optimization strategies for their campaigns",
+        "Scripted in Node.js to provide bespoke reporting solutions using Smartly, Google Data Studio, AirTables, and integrating multiple data sources",
+        "Trained in support, sales, and technical troubleshooting, and engineering custom solutions"
+    ],
+    "projects": [{
+        "name": "Guide to Facebook Marketing",
+        "url": "https://fbadsbook.com",
+        "description": "An open source book all about how to do Facebook Advertising",
+        "image_url": "fb-ads-book.png"
+    }]
+}, {
+    "start_date": "08-01-2016",
+    "end_date": "04-01-2017",
+    "title": "Frontend Team Lead",
+    "company": "Agorafy",
+    "type": "Full Time",
+    "accomplishments": [
+        "Programmed, architected, and managed frontend team in relaunch of Agorafy.com, a real estate listings platform",
+        "Participated in product and planning meetings with designers, product owners, and other stakeholders",
+        "Wrote technical product specifications and managed sprints for the frontend team",
+        "Responsible for hiring frontend team members"
+    ],
+    "projects": [{
+        "name": "Agorafy.com",
+        "url": "https://agorafy.com",
+        "description": "Real estate website",
+        "image_url": "agorafy.png"
+    }, {
+        "name": "Agorafy Newsroom",
+        "url": "https://newsroom.agorafy.com/",
+        "description": "Wordpress blog talking all about real estate"
+    }]
+}, {
+    "start_date": "06-01-2015",
+    "end_date": "08-01-2016",
+    "title": "Co-Founder",
+    "company": "CashInYourPoints",
+    "type": "Own Startup",
+    "accomplishments": [
+        "Programmed, architected, and managed frontend team in relaunch of Agorafy.com, a real estate listings platform",
+        "Participated in product and planning meetings with designers, product owners, and other stakeholders",
+        "Wrote technical product specifications and managed sprints for the frontend team",
+        "Responsible for hiring frontend team members"
+    ],
+    "projects": [{
+        "name": "CashInYourPoints.com",
+        "url": "https://cashinyourpoints.com",
+        "description": "Wordpress site explaining the CIYP process",
+        "image_url": "ciyp.png"
+    }]
+}, {
+    "start_date": "10-01-2014",
+    "end_date": "06-01-2015",
+    "title": "Front End Engineer",
+    "company": "Percolate",
+    "type": "Full Time",
+    "accomplishments": [
+        "Worked on a large scale (1500+ JS Files) Backbone.js enterprise application for a high-paced tech startup.",
+        "Used Backbone.js, Grunt, React.js, Webpack, Require.js, Node.js and other web JS frameworks",
+        "Played around with Social Media APIs",
+        "Worked on schema-driven Form Framework",
+        "Integration with Social, Marketing and Targeting APIs such as Marketo, Facebook, LinkedIn, Twitter, Pinterest, Instagram, Tumblr, and more",
+        "Built unique and intuitive email editor for Marketo",
+        "TDD in Jasmine",
+        "Multiple Times Per Day Release Cycle",
+        "Experimenting with cool new libraries like React.js",
+        "Heavily involved in company culture: JS Meetups Club, Run Club, Yoga Club, Beer Club"
     ]
+}, {
+
+}, {
+    "start_date": "04-01-2013",
+    "end_date": "04-01-2014",
+    "title": "Backbone.js / JS Architect",
+    "company": "NY Fed",
+    "type": "Full Time",
+    "accomplishments": [
+        "Backbone.js expert, worked on mission critical projects that provided intuitive reporting and management interfaces for Fed operations as well as small projects",
+        "Wrote and documented an extensive framework for handling client side and server side validation, creating complex form elements, interactive excel-style data tables, handling security, view management, and more",
+        "Responsible for developing architecture and Common Components (validation, widgets, data table, security, forms, etc) for data-intensive applications in Backbone.js",
+        "Helped revamp the NY Fed’s website by utilizing its huge repository of data to create interactive graphics for the public",
+        "Helped pioneer Node.js and MongoDB in the bank",
+        "Developed and designed new cross-browser and ARIA/Section 508 accessible interfaces",
+        "Developed standardized practices and functions to acquire data from internal APIs via AJAX"
+    ],
+    "projects": [{
+        "name": "Eight Different Faces of the Labor Market",
+        "description": "A visualization written in Raphael.js and HighCharts showing various stats about the Labor Market ",
+        "image_url": "labor-market.png",
+        "url": "https://www.newyorkfed.org/labor-conditions"
+    }, {
+        "name": "Effect of Parameters on Bank Solvency Regions",
+        "description": "A visualization mapping a complex formula explaining the effects of liquidation, leverage, and long-term debt on Bank Solvency",
+        "image_url": "bank-solvency.png",
+        "url": "https://www.newyorkfed.org/bank-solvency"
+    }, {
+        "name": "Smart Data for Small Business",
+        "description": "A visualization showing fun facts about small businesses",
+        "url": "https://www.newyorkfed.org/regional/smart-data-small-business",
+        "image_url": "smart-data-small-business.png"
+    }]
+}, {
+    "start_date": "09-01-2012",
+    "end_date": "03-01-2013",
+    "title": "Interactive Graphics Developer",
+    "company": "WSJ",
+    "type": "Full Time",
+    "accomplishments": [
+        "Using the hottest new JavaScript visualization tools and libraries, such as D3.js, HighCharts.js, and Node.js. to create interactive graphics in a fast-paced newsroom environment",
+        "Projects included “Grade the Debates”, “Pol Positions”, and “NYIndex”",
+        "Aggregated data and requirement by working closely with reporters, editors, and project managers",
+        "Built common tools for department and documented best practices"
+    ],
+    "projects": [{
+        "name": "House of Representatives = Pol Positions",
+        "description": "See different views of the current House of Representatives. Each member is plotted by their electoral success and their district's political tilt. Sort by close races, new seats, open seats and more.",
+        "image_url": "pol-positions.jpeg"
+    }, {
+        "name": "Who Won the Debate? You Give the Grade",
+        "description": "Grade Barack Obama and Mitt Romney on their performance at the 2012 presidential debates.",
+        "image_url": "debate-grader.png"
+    }, {
+        "name": "NY Index",
+        "description": "An interactive chart of NY's Wealthiest"
+    }]
 }]
