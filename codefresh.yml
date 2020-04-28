@@ -16,6 +16,6 @@ steps:
   deploy:
     image: codefresh/plugin-kompose:v1.5.0
     environment:
-      - KUBE_CONTEXT="gke-zoomevents-cluster-default-pool-c59c4b04-86ww"
+      - KUBE_CONTEXT=${{KUBE_CONTEXT}}
       - NAMESPACE=default
       - FILE=docker-compose.production.yml
