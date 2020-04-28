@@ -16,6 +16,6 @@ steps:
   deploy:
     image: codefresh/plugin-kompose:v1.5.0
     environment:
-      - KUBE_CONTEXT="${{KUBE_CONTEXT}}"
-      - NAMESPACE="${{NAMESPACE}}"
+      - KUBE_CONTEXT=${{KUBE_CONTEXT}}
+      - NAMESPACE=${{NAMESPACE}}
       - FILE="docker-compose.production.yml"
