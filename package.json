@@ -28,11 +28,12 @@
     "styled-icons": "^2.3.0"
   },
   "scripts": {
+    "dev": "docker-compose up",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "deploy": "yarn build && mv build/index.html build/200.html && surge build && sh ./deployHooks.sh",
+    "deploy": "yarn build && kompose up -f docker-compose.production.yml",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public"
   },

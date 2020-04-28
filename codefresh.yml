@@ -1,0 +1,21 @@
+version: "1.0"
+stages:
+  - "clone"
+  - "build"
+  - "test"
+
+steps:
+  clone:
+    title: "Cloning repository"
+    type: "git-clone"
+    repo: "tolicodes/tolicodes.com"
+    revision: "${{CF_BRANCH}}"
+    git: "github"
+    stage: "clone"
+
+  delploy:
+    type: kompose
+    arguments:
+      KUBE_CONTEXT: "${{KUBE_CONTEXT}}"
+      NAMESPACE: "${{NAMESPACE}}"
+      FILE: docker-compose.production.yml
