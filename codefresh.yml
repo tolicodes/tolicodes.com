@@ -15,7 +15,8 @@ steps:
 
   deploy:
     image: codefresh/plugin-kompose:v1.5.0
-    command: ls
+    commands:
+      - ls
     environment:
       - KUBE_CONTEXT=${{KUBE_CONTEXT}}
       - NAMESPACE=default
