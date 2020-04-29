@@ -20,6 +20,8 @@ steps:
     environment:
       - CONVERT=true
       - FILE=docker-compose.production.yml
+    commands:
+      - ls
 
   deploy:
     title: Deploying App
