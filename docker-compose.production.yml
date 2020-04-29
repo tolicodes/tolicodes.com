@@ -8,4 +8,4 @@ services:
       - "80:80"
     image: tolicodes/tolicodes.com
     labels:
-      - kompose.service.expose: "sites.tolicodes.com"
+      - kompose.service.expose="true"
