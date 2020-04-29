@@ -45,3 +45,5 @@ ReactDOM.render(
   document.getElementById('root'),
 );
 registerServiceWorker();
+
+console.log('yo')
