@@ -2,7 +2,7 @@ version: "1.0"
 stages:
   - "clone"
   - "build"
-  - "test"
+  - "deploy"
 
 steps:
   clone:
@@ -15,6 +15,7 @@ steps:
 
   convert:
     image: tolicodes/cf-kompose-plugin:latest
+    stage: deploy
     working_directory: ${{CF_REPO_NAME}}
     environment:
       - CONVERT=true
