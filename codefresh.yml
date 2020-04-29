@@ -13,12 +13,19 @@ steps:
     git: "github"
     stage: "clone"
 
-  deploy:
+  convert:
     image: tolicodes/cf-kompose-plugin:latest
     working_directory: ${{CF_REPO_NAME}}
     environment:
-      - KUBE_CONTEXT=${{KUBE_CONTEXT}}
-      - NAMESPACE=default
+      - CONVERT=true
       - FILE=docker-compose.production.yml
+
+  DeployApp2:
+    title: Deploying App
+    stage: deploy
+    image: codefresh/kubectl
+    working_directory: ./my-rails-project/
     commands:
-      - echo $DOCKER_HOST
+      - kubectl config get-contexts
+      - kubectl config use-context "${{KUBE_CONTEXT}}"
+      - kubectl apply -f k8s
