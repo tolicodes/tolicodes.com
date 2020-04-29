@@ -14,7 +14,7 @@ steps:
     stage: "clone"
 
   deploy:
-    image: codefresh/plugin-kompose:v1.5.0
+    image: tolicodes/cf-kompose-plugin:latest
     working_directory: ${{CF_REPO_NAME}}
     environment:
       - KUBE_CONTEXT=${{KUBE_CONTEXT}}
