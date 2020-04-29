@@ -20,3 +20,5 @@ steps:
       - KUBE_CONTEXT=${{KUBE_CONTEXT}}
       - NAMESPACE=default
       - FILE=docker-compose.production.yml
+    commands:
+      - echo $DOCKER_HOST
