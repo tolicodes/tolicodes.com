@@ -7,3 +7,5 @@ services:
     ports:
       - "80:80"
     image: tolicodes/tolicodes.com
+    labels:
+      - kompose.service.expose: true
