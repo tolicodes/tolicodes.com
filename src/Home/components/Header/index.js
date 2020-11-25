@@ -186,7 +186,7 @@ export default class Header extends Component {
           Anatoliy D. Zaslavskiy
         </Subtitle>
         <Links>
-          <Link href="/resume.pdf">
+          <Link href="https://drive.google.com/file/d/1Bivo3qUUavVXow_0635GcXOt-B_9Hxsf/view?usp=sharing">
             <FileDownload size={ICON_SIZE} />
             <LinkLabel>
               Resume
