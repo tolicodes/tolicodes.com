@@ -1,12 +1,12 @@
-import { Col, CssBaseline, GeistProvider, Page, Row } from "@geist-ui/react";
-import React from "react";
+import { CssBaseline, GeistProvider } from "@geist-ui/react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import { Description } from "../Description";
 import { Header } from "../Header";
 import { Menu } from "../Menu";
 import { SocialNetworkMenu, SocialNetworkType } from "../SocialNetworkMenu";
 import { YouTubeVideo } from "../YouTubeVideo";
-
+import db from "../../libs/firestore";
 const userPicture = require("./assets/placeholder-user-picture.png");
 const logo = require("./assets/logo.png");
 
@@ -18,9 +18,15 @@ const Container = styled.div`
   box-sizing: border-box;
 `;
 
-interface AppProps {}
+export function App() {
+  const userName = window.location.host;
 
-export function App(props: AppProps) {
+  useEffect(() => {
+    if (location.hostname === "localhost") {
+      db.useEmulator("localhost", 8080);
+    }
+  }, []);
+
   let menuLinks = [
     {
       title: "Resume",
@@ -57,7 +63,6 @@ export function App(props: AppProps) {
       url: "https://github.com/tolicodes/tolicodes.com",
     },
   ];
-
   const aboutMeText = (
     <>
       <p>
@@ -71,15 +76,15 @@ export function App(props: AppProps) {
         but I am available for consulting pr Scaling Javascript Fr
       </p>
       <p>
+        This experience, along with my br taking on and over delivering pr
+        eatives I am confdent in oad network of designers, developers,
+        marketers, animators, copywriters, and other cr ojects of most sizes
+      </p>
+      <p>
         Projects, I've worked with all sorts of companies: big, small, startups,
         small pr American Expr ess, Federal Reserve, WSJ, Per colate, and
         Chanel. agencies, fnancial, health, politics, you name it. My past
         clients include
-      </p>
-      <p>
-        This experience, along with my br taking on and over delivering pr
-        eatives I am confdent in oad network of designers, developers,
-        marketers, animators, copywriters, and other cr ojects of most sizes
       </p>
       <p>
         ofound ef eativity and pr oductivity mental health education. Although
