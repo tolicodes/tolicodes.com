@@ -50,7 +50,8 @@
     "firebase": "firebase"
   },
   "dependencies": {
-    "@geist-ui/react": "^2.1.0-canary.2"
+    "@geist-ui/react": "^2.1.0-canary.2",
+    "ahooks": "^2.9.2"
   },
   "husky": {
     "hooks": {
