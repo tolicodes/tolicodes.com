@@ -11,8 +11,7 @@ const Template: Story<TimeLineProps> = (...args) => <Timeline {...args} />;
 
 export const Default = Timeline.bind({});
 Default.args = {
-  backgroundColor: "red",
-  items: [
+  projects: [
     {
       title: "The Doctor's Channel",
       iconUrl: "/assets/...",
