@@ -66,7 +66,7 @@ Default.args = {
       iconUrl: "/assets/...",
       tag: "Tech",
       begin: "2012/01",
-      end: "2013/12",
+      end: "2015/12",
     },
   ],
 };

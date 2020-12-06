@@ -62,6 +62,23 @@ export function Timeline(props: TimeLineProps) {
         xmlns="http://www.w3.org/2000/svg"
         viewBox={`0 0 ${size.width} ${diagramHeight}`}
       >
+        <svg
+          x={-10}
+          y={-10}
+          width={size.width - 10}
+          height={size.height - 10}
+          viewBox={`10 10 ${size.width - 10} ${size.height - 10}`}
+          fill={"red"}
+        >
+          <text y={0} x={0} fill={"white"}>
+            Hello
+          </text>
+          <YearsLine
+            y={yearsLineY}
+            beginYear={years?.[0]}
+            endYear={years?.[years.length - 1]}
+          />
+        </svg>
         {/*  /!*<defs>*!/*/}
         {/*  /!*  <style>{style}</style>*!/*/}
         {/*  /!*</defs>*!/*/}
@@ -69,11 +86,6 @@ export function Timeline(props: TimeLineProps) {
         {/*  /!*{projectsGroups.map((pg) => (*!/*/}
         {/*  /!*  <ProjectGroup projects={pg} />*!/*/}
         {/*  /!*))}*!/*/}
-        <YearsLine
-          y={yearsLineY}
-          beginYear={years?.[0]}
-          endYear={years?.[years.length - 1]}
-        />
       </svg>
     </Container>
   );

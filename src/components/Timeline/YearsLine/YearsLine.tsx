@@ -22,21 +22,14 @@ export function YearsLine({ beginYear, endYear, y = 0 }: YearLineProps) {
     index++;
   }
 
-  console.log(years);
-
   return (
-    <svg y={y} width={"100%"} viewBox={`0 0 100% 100%`}>
-      <svg>
-        <line
-          x1="0"
-          y1={0}
-          x2={"100%"}
-          y2={0}
-          stroke={"white"}
-          strokeWidth={3}
-        />
-        <g width={"50%"}>{years}</g>
-      </svg>
+    <svg
+      y={y}
+      width={"100%"}
+      viewBox={`0 0 100% 100%`}
+      style={{ fill: "magenta" }}
+    >
+      <g width={"50%"}>{years}</g>
     </svg>
   );
 }
