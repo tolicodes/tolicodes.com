@@ -20,7 +20,7 @@ export function Project() {
       <text
         x={10}
         y={
-          document.getElementById("project-1")?.getBoundingClientRect().height /
+          // document.getElementById("project-1")?.getBoundingClientRect().height /
           2
         }
       >

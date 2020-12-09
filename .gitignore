@@ -1,5 +1,6 @@
 dist
-.storybook
 node_modules
 .idea
 .vscode
+node_modules
+firebase-debug.log

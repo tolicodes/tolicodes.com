@@ -7,9 +7,12 @@ export default {
   component: Timeline,
 };
 
+// @ts-ignore
 const Template: Story<TimeLineProps> = (...args) => <Timeline {...args} />;
 
 export const Default = Timeline.bind({});
+
+// @ts-ignore
 Default.args = {
   projects: [
     {
