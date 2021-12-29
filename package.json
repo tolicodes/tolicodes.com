@@ -1,0 +1,8 @@
+{
+  "name": "tolicodes.com",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/tolicodes/tolicodes.com.git",
+  "author": "Anatoliy Zaslavskiy <toli@oselot.com>",
+  "license": "MIT"
+}
