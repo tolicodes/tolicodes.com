@@ -5,7 +5,7 @@ import { App } from "./App";
 describe("<App/>", () => {
   test("smoke", () => {
     expect(() => {
-      render(<App />);
+      render(<App pageId={"1234"} />);
     }).not.toThrowError();
   });
 });

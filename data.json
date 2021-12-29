@@ -1,0 +1,155 @@
+{
+  "header": {
+    "logo": "",
+    "menu": [
+      {
+        "title": "Resume",
+        "href": ""
+      },
+      {
+        "title": "CodeMentor",
+        "href": ""
+      },
+      {
+        "title": "My Story",
+        "href": ""
+      },
+      {
+        "title": "Services",
+        "href": ""
+      },
+      {
+        "title": "Hobbies",
+        "href": ""
+      },
+      {
+        "title": "Open Source",
+        "href": ""
+      }
+    ],
+    "socialLinks": [
+      {
+        "type": "linkedin",
+        "href": ""
+      },
+      {
+        "title": "github",
+        "href": ""
+      }
+    ]
+  },
+  "blocks": [
+    {
+      "type": "youtube-video",
+      "title": "Watch My Story",
+      "url": "https://www.youtube.com/embed/oagszCmJLpU"
+    },
+    {
+      "type": "text-with-image",
+      "imageUrl": "",
+      "text": "Markdown text here"
+    },
+    {
+      "type": "three-columns-text",
+      "tile": "Services",
+      "columns": [
+        {
+          "iconUrl": "",
+          "title": "Data visualization",
+          "text": "I started my data visualization journey at the WSJ during the 2012 elections..."
+        },
+        {
+          "iconUrl": "",
+          "title": "Freelance Developing",
+          "text": "With over 10 years of experiences..."
+        },
+        {
+          "iconUrl": "",
+          "title": "Facebook Marketing",
+          "text": "I became fascinated with Facebook Marketing when..."
+        }
+      ]
+    },
+    {
+      "type": "timeline",
+      "data": {
+        "tags": [
+          {
+            "name": "Tech",
+            "color": "#ff633c"
+          },
+          {
+            "name": "Startups",
+            "color": "#de2f66"
+          },
+          {
+            "name": "Freelance",
+            "color": "#88eb6c"
+          },
+          {
+            "name": "Jobs",
+            "color": "#d3e041"
+          }
+        ],
+        "developments": [
+          {
+            "title": "The Doctor's Channel",
+            "iconUrl": "/assets/...",
+            "tag": "Jobs",
+            "begin": "2011/01",
+            "end": "2011/03"
+          },
+          {
+            "title": "Tanya Taylor",
+            "iconUrl": "/assets/...",
+            "tag": "Jobs",
+            "begin": "2012/01",
+            "end": "2013/12"
+          }
+        ]
+      }
+    },
+    {
+      "type": "recommendations",
+      "title": "Vetted On",
+      "list": [{"icon": "/assets/","link": "http://..."}]
+    },
+    {
+      "type": "testimonials",
+      "testimonials": [
+        {
+          "pictureUrl": "assets/man_photo.png",
+          "name": "Mihn Mai Optimus",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "list-of-things",
+      "list": [
+        {
+          "type": "text-with-button",
+          "imageUrl": "",
+          "text": "Markdown text here",
+          "buttonText": "View",
+          "buttonLink": "http://.."
+        }
+      ]
+    },
+    {
+      "type": "Portfolio",
+      "projects": [
+        {
+          "title": "Crypto Landscape Viz",
+          "description": "D3 visualization about the relationships of crypt currency projects by observing interactions on Github and Twitter.",
+          "buttons": {
+            "View": "http://",
+            "Backend": "http://",
+            "Frontend": "http://",
+            "Code": "http://"
+          }
+        }
+      ]
+    }
+  ]
+}
