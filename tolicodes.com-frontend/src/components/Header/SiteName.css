@@ -1,0 +1,18 @@
+.siteNameContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #FF652F;
+    margin: 0px;
+}
+
+#siteTagline {
+    padding-top: 0px;
+    margin-top: 0px;
+}
+
+#siteLogo {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}

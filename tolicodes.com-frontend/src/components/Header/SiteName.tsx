@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './SiteName.css'
+
 export interface ISiteNameProps {
     siteLogoSrc: string, siteTagline: string
 }
@@ -7,11 +9,10 @@ export interface ISiteNameProps {
 export const SiteName = ({ siteLogoSrc, siteTagline }: ISiteNameProps) => {
     return (
         <>
-            <div>
-                <img src={siteLogoSrc} alt='logo'></img>
-            </div>
-            <div>
-                <h3>{siteTagline}</h3>
+            <div className='siteNameContainer'>
+                <h1 id='siteLogo'>{'toli<codes>'}</h1>
+                {/* <img src={siteLogoSrc} alt='logo'></img> */}
+                <p id='siteTagline'>{siteTagline}</p>
             </div>
         </>
     )
