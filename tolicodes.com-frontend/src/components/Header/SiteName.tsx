@@ -5,5 +5,14 @@ export interface ISiteNameProps {
 }
 
 export const SiteName = ({ siteLogoSrc, siteTagline }: ISiteNameProps) => {
-    return <>Hello World</>
+    return (
+        <>
+            <div>
+                <img src={siteLogoSrc} alt='logo'></img>
+            </div>
+            <div>
+                <h3>{siteTagline}</h3>
+            </div>
+        </>
+    )
 }
