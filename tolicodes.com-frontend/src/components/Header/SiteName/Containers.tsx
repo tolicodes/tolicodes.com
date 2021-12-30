@@ -5,7 +5,6 @@ export const SiteNameContainer = styled.div`
     flex-direction: column;
     align-items: center;
     width: 100%;
-    background-color: #FF652F;
     margin: 0px;
 `;
 
