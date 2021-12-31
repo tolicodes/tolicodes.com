@@ -4,5 +4,8 @@
   "main": "index.js",
   "repository": "https://github.com/tolicodes/tolicodes.com.git",
   "author": "Anatoliy Zaslavskiy <toli@oselot.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "firebase": "^9.6.1"
+  }
 }
