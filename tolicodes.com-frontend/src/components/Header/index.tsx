@@ -1,12 +1,14 @@
-import React from 'react'
-
-import { SiteName } from './SiteName';
+import React, { PropsWithChildren } from 'react'
 import { Container } from './Container'
 
-export const Header = () => {
+export interface HeaderProps extends PropsWithChildren<any> {
+    
+}
+
+export const Header = (props: HeaderProps) => {
     return (
         <Container>
-            <SiteName siteLogoSrc={'Logo Goes Here'} siteTagline={'Anatoliy D. Zaslavskiy'} />
+            {props.children}
         </Container>
     )
 }
