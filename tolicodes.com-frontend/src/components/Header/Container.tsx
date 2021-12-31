@@ -9,6 +9,5 @@ export const Container = styled.div`
     height: 100%;
 
     background-color: #FF652F;
-    width: 100%
     
 `;

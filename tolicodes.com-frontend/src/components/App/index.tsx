@@ -6,6 +6,7 @@ import { Header } from '../Header';
 import { SiteName } from '../SiteName';
 import { SocialNetworkMenu } from '../SocialNetworkMenu';
 import { Menu } from '../Menu';
+import { YouTubeVideo } from '../YouTubeVideo';
 
 import { data } from '../../data'
 
@@ -19,6 +20,11 @@ function App() {
             <SocialNetworkMenu links={data.socialMediaLinks}/>
             <Menu links={data.menuLinks} />
           </Header>
+          <YouTubeVideo
+            src={data.youTubeVideo.src}
+            height={data.youTubeVideo.height}
+            title={data.youTubeVideo.title}
+          />
         </CssBaseline>
       </GeistProvider>
     </Container>
