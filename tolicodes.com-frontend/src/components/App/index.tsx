@@ -10,7 +10,7 @@ import { Menu } from '../Menu';
 import { YouTubeVideo } from '../YouTubeVideo';
 import { Description } from '../Description';
 
-import { data } from '../../data'
+import { data } from '../../data/data'
 
 function App() {
   return (
@@ -18,7 +18,10 @@ function App() {
       <GeistProvider>
         <CssBaseline>
           <Header>
-            <SiteName siteLogoSrc={'Logo Goes Here'} siteTagline={'Anatoliy D. Zaslavskiy'} />
+            <SiteName 
+              siteLogoSrc={data.siteName.siteLogoSrc} 
+              siteTagline={data.siteName.sitTagLine} 
+            />
             <SocialNetworkMenu links={data.socialMediaLinks}/>
             <Menu links={data.menuLinks} />
           </Header>

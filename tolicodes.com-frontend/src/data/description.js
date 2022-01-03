@@ -1,44 +1,5 @@
-import { SocialNetworkType } from './components/SocialNetworkMenu'
-
-export const data = {
-  menuLinks: [
-    {
-      title: "Resume",
-      url: "/resume",
-    },
-    {
-      title: "CodeMentor",
-      url: "/codeMentor",
-    },
-    {
-      title: "My story",
-      url: "/my-story",
-    },
-    {
-      title: "Services",
-      url: "/services",
-    },
-    {
-      title: "Hobbies",
-      url: "/hobbies",
-    },
-    {
-      title: "Open Source",
-      url: "/open-source",
-    },
-  ],
-  socialMediaLinks: [
-    {
-      type: SocialNetworkType.LinkedIn,
-      url: "https://www.linkedin.com/in/tolicodes/",
-    },
-    {
-      type: SocialNetworkType.GitHub,
-      url: "https://github.com/tolicodes/tolicodes.com",
-    },
-  ],
-  description: {
-    title: 'About Me',
+export const description = {
+  title: 'About Me',
     aboutMeText: (
       <>
         <p>
@@ -70,10 +31,4 @@ export const data = {
         </p>
       </>
     ),
-  },
-  youTubeVideo: {
-    src: "https://www.youtube.com/embed/z1VNwapOb8E",
-    height: '501px', 
-    title: 'Watch My Story'
-  }
 }
