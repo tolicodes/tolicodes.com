@@ -1,14 +1,15 @@
-import React, { PropsWithChildren } from 'react'
-import { Container } from './Container'
+import * as React from "react";
 
-export interface HeaderProps extends PropsWithChildren<any> {
-    
-}
+import { SiteName, SocialLinks, NavBar } from "../../components";
 
-export const Header = (props: HeaderProps) => {
-    return (
-        <Container>
-            {props.children}
-        </Container>
-    )
-}
+import { SHeader } from "./SHeader";
+
+export const Header = () => {
+  return (
+    <SHeader>
+      <SiteName />
+      <SocialLinks />
+      <NavBar />
+    </SHeader>
+  );
+};
