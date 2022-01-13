@@ -5,4 +5,5 @@ module.exports = {
     "@storybook/addon-links",
     "storybook-addon-sass-postcss",
   ],
+  staticDirs: ["../public"],
 };
