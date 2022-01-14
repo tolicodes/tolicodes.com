@@ -2,6 +2,8 @@ import * as React from "react";
 
 import { SNavBar } from "./SNavBar";
 
+import { NavBarLink } from "../../components";
+
 type TNavigationItem = {
   name: string;
   uri: string;
@@ -25,8 +27,20 @@ const NAVIGATION_MOCK = [
     uri: "/my-story",
   },
   {
+    name: "Services",
+    uri: "/services",
+  },
+  {
     name: "Hobbies",
     uri: "/hobbies",
+  },
+  {
+    name: "Open Source",
+    uri: "/open-source",
+  },
+  {
+    name: "Portfolio",
+    uri: "/portfolio",
   },
 ];
 
@@ -35,9 +49,11 @@ export const NavBar: React.FC<INavBar> = ({ navigation = NAVIGATION_MOCK }) => {
     <SNavBar>
       <ul>
         {navigation.map((navigationItem) => (
-          <li key={navigationItem.name}>
-            <a href={navigationItem.uri}>{navigationItem.name}</a>
-          </li>
+          <NavBarLink
+            key={navigationItem.name}
+            name={navigationItem.name}
+            uri={navigationItem.uri}
+          />
         ))}
       </ul>
     </SNavBar>

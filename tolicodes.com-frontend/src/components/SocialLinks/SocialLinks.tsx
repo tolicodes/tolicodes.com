@@ -2,35 +2,39 @@ import * as React from "react";
 
 import { SSocialLinks } from "./SSocialLinks";
 
+import { SocialLink } from "../../components";
+
+import { IconLinkedIn, IconGithub, IconMail } from "../Icons";
+
 enum SocialNetwork {
   LinkedIn = "LinkedIn",
   GitHub = "GitHub",
   Mail = "Mail",
 }
 
-type TLink = {
-  logoSrc: string;
+export interface ISocialLink {
+  icon: React.ReactNode;
   socialNetwork: SocialNetwork;
   uri: string;
-};
+}
 
 interface ISocialLinks {
-  links?: TLink[];
+  links?: ISocialLink[];
 }
 
 const LINKS_MOCK = [
   {
-    logoSrc: "https://tolicodes.s3.com/images/linkedin.png",
+    icon: <IconLinkedIn />,
     socialNetwork: SocialNetwork.LinkedIn,
     uri: "https://www.linkedin.com/in/tolicodes/",
   },
   {
-    logoSrc: "https://tolicodes.s3.com/images/linkedin.png",
+    icon: <IconGithub />,
     socialNetwork: SocialNetwork.GitHub,
     uri: "https://www.linkedin.com/in/tolicodes/",
   },
   {
-    logoSrc: "https://tolicodes.s3.com/images/linkedin.png",
+    icon: <IconMail />,
     socialNetwork: SocialNetwork.Mail,
     uri: "https://www.linkedin.com/in/tolicodes/",
   },
@@ -40,11 +44,12 @@ export const SocialLinks: React.FC<ISocialLinks> = ({ links = LINKS_MOCK }) => {
   return (
     <SSocialLinks>
       {links.map((link) => (
-        <li key={link.socialNetwork}>
-          <a href={link.uri}>
-            <img src={link.logoSrc} alt={link.socialNetwork} />
-          </a>
-        </li>
+        <SocialLink
+          key={link.socialNetwork}
+          socialNetwork={link.socialNetwork}
+          uri={link.uri}
+          icon={link.icon}
+        />
       ))}
     </SSocialLinks>
   );

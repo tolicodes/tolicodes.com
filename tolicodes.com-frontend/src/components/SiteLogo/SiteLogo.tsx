@@ -1,11 +1,20 @@
 import React, { FC } from "react";
 import { SSiteLogo } from "./styles";
 
+import { IconLogo } from "../Icons";
+
 interface ISiteLogo {
-  logoSrc: string;
+  logoSrc?: string | React.ReactElement;
   altText: string;
 }
 
-export const SiteLogo: FC<ISiteLogo> = ({ logoSrc, altText }) => (
-  <SSiteLogo src={logoSrc} alt={altText} />
-);
+export const SiteLogo: FC<ISiteLogo> = ({
+  logoSrc = <IconLogo />,
+  altText,
+}) => {
+  if (typeof logoSrc !== "string") {
+    return logoSrc;
+  }
+
+  return <SSiteLogo src={logoSrc} alt={altText} />;
+};
