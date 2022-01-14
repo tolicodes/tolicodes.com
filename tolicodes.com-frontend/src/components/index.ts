@@ -4,3 +4,7 @@ export * from "./SocialLinks/SocialLinks";
 export * from "./SocialLink/SocialLink";
 export * from "./NavBar/NavBar";
 export * from "./NavBarLink/NavBarLink";
+export * from "./Section/Section";
+export * from "./PortfolioList/PortfolioList";
+export * from "./Header/Header";
+export * from "./Button/Button";

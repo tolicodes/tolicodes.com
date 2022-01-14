@@ -4,8 +4,17 @@ export const CSSFonts = css`
   @import url("https://fonts.googleapis.com/css2?family=PT+Mono&display=swap");
 `;
 
-export const CSSHeaderSubtitle = css`
+export const CSSFontFamilyPTMono = css`
   font-family: "PT Mono", monospace;
+`;
+
+export const CSSFontFamilyArial = css`
+  font-family: "Arial", "Helvetica", sans-serif;
+`;
+
+export const CSSHeaderSubtitle = css`
+  ${CSSFontFamilyPTMono};
+
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
@@ -15,9 +24,10 @@ export const CSSHeaderSubtitle = css`
 `;
 
 export const CSSNavbarLink = css`
-  font-family: "Arial", "Helvetica", sans-serif;
+  ${CSSFontFamilyArial};
+
   font-style: normal;
-  font-weight: bold;
+  font-weight: normal;
   font-size: 20px;
   line-height: 23px;
   text-align: center;
@@ -28,4 +38,42 @@ export const CSSNavbarLinkBold = css`
   ${CSSNavbarLink};
 
   font-weight: bold;
+`;
+
+export const CSSPortfolioTitle = css`
+  ${CSSFontFamilyArial};
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 35px;
+  line-height: 40px;
+  letter-spacing: 0.762901px;
+`;
+
+export const CSSPortfolioDescription = css`
+  ${CSSFontFamilyArial};
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  letter-spacing: 0.523132px;
+`;
+
+export const CSSPortfolioDescriptionBold = css`
+  ${CSSPortfolioDescription};
+
+  font-weight: bold;
+`;
+
+export const CSSSectionTitle = css`
+  ${CSSFontFamilyPTMono};
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 36px;
+  text-align: center;
+  letter-spacing: 0.797153px;
 `;

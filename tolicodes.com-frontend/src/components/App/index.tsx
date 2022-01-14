@@ -2,13 +2,16 @@ import React from "react";
 
 import { GSBase } from "../../styles/global-styles";
 
-import { Header } from "../Header";
+import { Header, Section, PortfolioList } from "../../components";
 
 function App() {
   return (
     <>
       <GSBase />
       <Header />
+      <Section title="Portfolio">
+        <PortfolioList />
+      </Section>
     </>
   );
 }
