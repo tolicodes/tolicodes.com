@@ -95,7 +95,7 @@ const Timeline: React.FC<TimelineProps> = ({ timeline }) => {
         ))}
         <TimelineYears>
           {[...Array(range.end - range.start + 1)].map((_, index) => (
-            <p key={`${index}`}>{index + range.start}</p>
+            <p key={`${index}`}>{index % 2 === 1 ? "" : index + range.start}</p>
           ))}
         </TimelineYears>
       </div>

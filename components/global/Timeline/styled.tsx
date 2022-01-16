@@ -37,6 +37,25 @@ export const TimelineYears = styled.div<TimelineYearsProps>`
   margin-left: 100px;
   flex-direction: row;
   justify-content: space-between;
+  margin-top: 20px;
+
+  p {
+    position: relative;
+    margin-top: 10px;
+    padding-top: 10px;
+    font-weight: 600;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: -10px;
+      height: 7px;
+      left: 50%;
+      width: 1px;
+      background-color: black;
+      transform: translate(-50%);
+    }
+  }
 `;
 
 interface ExperienceItemProps {
