@@ -65,6 +65,23 @@ const Timeline: React.FC<TimelineProps> = ({ timeline }) => {
     return r;
   });
 
+  const calculatePositionAndWidth = (experienceItem: IExperience) => {
+    /**
+     * Left:
+     * 1. Calculate how much years there are, (end - start) + 1
+     * 2. and how much space are they consuming
+     * Width:
+     * 1. Calculate how much space a single year is consuming
+     * 2. Divide by 12
+     * 3. Calculate area
+     */
+    
+    return {
+      left: 0,
+      width: 100,
+    };
+  };
+
   return (
     <Container>
       <div>
@@ -75,20 +92,28 @@ const Timeline: React.FC<TimelineProps> = ({ timeline }) => {
                 <p>{item.type}</p>
               </Type>
               <TimelineExperience>
-                {item.experience.map((exp, index) => (
-                  <ExperienceItem theme={item.color} key={`${index}`}>
-                    {exp.company.image ? (
-                      <Image
-                        src={exp.company.image}
-                        alt={exp.company.title}
-                        width={25}
-                        height={25}
-                      />
-                    ) : (
-                      <p>{exp.company.title}</p>
-                    )}
-                  </ExperienceItem>
-                ))}
+                {item.experience.map((exp, index) => {
+                  const { width, left } = calculatePositionAndWidth(exp);
+                  return (
+                    <ExperienceItem
+                      theme={item.color}
+                      key={`${index}`}
+                      width={width}
+                      left={left}
+                    >
+                      {exp.company.image ? (
+                        <Image
+                          src={exp.company.image}
+                          alt={exp.company.title}
+                          width={25}
+                          height={25}
+                        />
+                      ) : (
+                        <p>{exp.company.title}</p>
+                      )}
+                    </ExperienceItem>
+                  );
+                })}
               </TimelineExperience>
             </TimelineEntry>
           </div>
