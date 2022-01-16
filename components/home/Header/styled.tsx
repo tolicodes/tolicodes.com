@@ -37,11 +37,6 @@ export const SocialMediaLinks = styled.div<SocialMediaLinksProps>`
   justify-content: center;
   column-gap: 24px;
   margin: 16px 0;
-
-  img {
-    width: 22px;
-    height: 22px;
-  }
 `;
 
 interface NavbarProps {}

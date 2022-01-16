@@ -22,18 +22,33 @@ const Header = ({}: HeaderProps) => {
           <p>Anatoliy D. Zaslavskiy</p>
         </Logo>
         <SocialMediaLinks>
-          <a href="https://linkedin.com" target={"_blank"} rel={"noreferrer"}>
-            <Image src="/icons/linkedin.svg" alt="LinkedIn" />
+          <a href={"https://linkedin.com"} target={"_blank"} rel={"noreferrer"}>
+            <Image
+              src={"/icons/linkedin.svg"}
+              alt={"LinkedIn"}
+              width={"22px"}
+              height={"22px"}
+            />
           </a>
-          <a href="https://github.com" target={"_blank"} rel={"noreferrer"}>
-            <Image src="/icons/github.svg" alt="GitHub" />
+          <a href={"https://github.com"} target={"_blank"} rel={"noreferrer"}>
+            <Image
+              src={"/icons/github.svg"}
+              alt={"GitHub"}
+              width={"22px"}
+              height={"22px"}
+            />
           </a>
           <a
-            href="mail:contact@webaddress.com"
+            href={"mail:contact@webaddress.com"}
             target={"_blank"}
             rel={"noreferrer"}
           >
-            <Image src="/icons/email.svg" alt="Email" />
+            <Image
+              src={"/icons/email.svg"}
+              alt={"Email"}
+              width={"22px"}
+              height={"22px"}
+            />
           </a>
         </SocialMediaLinks>
         <Navbar>
