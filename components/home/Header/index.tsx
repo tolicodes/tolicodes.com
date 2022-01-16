@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import {
   Container,
   Logo,
@@ -21,14 +22,18 @@ const Header = ({}: HeaderProps) => {
           <p>Anatoliy D. Zaslavskiy</p>
         </Logo>
         <SocialMediaLinks>
-          <a href="https://linkedin.com" target={"_blank"}>
-            <img src="/icons/linkedin.svg" alt="LinkedIn" />
+          <a href="https://linkedin.com" target={"_blank"} rel={"noreferrer"}>
+            <Image src="/icons/linkedin.svg" alt="LinkedIn" />
           </a>
-          <a href="https://github.com" target={"_blank"}>
-            <img src="/icons/github.svg" alt="GitHub" />
+          <a href="https://github.com" target={"_blank"} rel={"noreferrer"}>
+            <Image src="/icons/github.svg" alt="GitHub" />
           </a>
-          <a href="mail:contact@webaddress.com" target={"_blank"}>
-            <img src="/icons/email.svg" alt="Email" />
+          <a
+            href="mail:contact@webaddress.com"
+            target={"_blank"}
+            rel={"noreferrer"}
+          >
+            <Image src="/icons/email.svg" alt="Email" />
           </a>
         </SocialMediaLinks>
         <Navbar>
@@ -63,7 +68,9 @@ const Header = ({}: HeaderProps) => {
           src={"https://www.youtube.com/embed/z1VNwapOb8E"}
           title={"How I Learned Empathy with Asperger's | Anatoliy Zaslavskiy"}
           frameBorder={0}
-          allow={"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"}
+          allow={
+            "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          }
           allowFullScreen={true}
         />
       </WatchMyStory>
