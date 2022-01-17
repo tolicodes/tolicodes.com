@@ -126,8 +126,6 @@ const Timeline: React.FC<TimelineProps> = ({ timeline }) => {
                     <Image
                       src={exp.company.image}
                       alt={exp.company.title}
-                      // width={50}
-                      // height={50}
                       layout={"fill"}
                       objectFit={"contain"}
                     />
