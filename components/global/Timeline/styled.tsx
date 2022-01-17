@@ -7,36 +7,35 @@ export const Container = styled.div<ContainerProps>`
 `;
 
 interface TypeProps {}
-export const Type = styled.div<TypeProps>`
-  width: 80px;
-
-  p {
-    font-weight: bold;
-    font-size: 14px;
-  }
+export const Type = styled.p<TypeProps>`
+  width: 100px;
+  font-weight: bold;
+  font-size: 14px;
 `;
 
 interface TimelineEntryProps {}
 export const TimelineEntry = styled.div<TimelineEntryProps>`
   display: flex;
   flex-direction: row;
-  column-gap: 10px;
+  padding: 10px 0;
   margin-bottom: 10px;
 `;
 
 interface TimelineYearsProps {}
 export const TimelineYears = styled.div<TimelineYearsProps>`
   display: flex;
-  margin-left: 80px;
+  margin-left: 100px;
   flex-direction: row;
   justify-content: space-between;
   margin-top: 20px;
 
-  p {
+  span {
     position: relative;
     margin-top: 10px;
     padding-top: 10px;
     font-weight: 600;
+    min-width: 40px;
+    text-align: center;
 
     &:after {
       content: "";
@@ -56,17 +55,18 @@ export const TimelineExperience = styled.div<TimelineExperienceProps>`
   display: flex;
   flex-direction: row;
   position: relative;
+  margin-bottom: 10px;
 `;
 
 interface ExperienceItemProps {
   theme: string;
-  width: number;
+  area: number;
   left: number;
 }
 export const ExperienceItem = styled.div<ExperienceItemProps>`
   background-color: ${(props) => props.theme};
   position: absolute;
   left: ${(props) => props.left}px;
-  width: ${(props) => props.width}px;
+  width: ${(props) => props.area}px;
   padding: 5px;
 `;

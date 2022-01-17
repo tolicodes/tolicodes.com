@@ -23,7 +23,7 @@ const timeline: ITimeline = {
             end: 1347834181464,
           },
           company: {
-            image: "/companies/TheDoctorChannel.png",
+            image: "/companies/Joonbug.png",
             title: "Joonbug.com",
             website: "",
           },
@@ -34,7 +34,7 @@ const timeline: ITimeline = {
             end: 1366151023496,
           },
           company: {
-            image: "/companies/TheDoctorChannel.png",
+            image: "/companies/WSJ.png",
             title: "WSJ",
             website: "",
           },
@@ -45,7 +45,7 @@ const timeline: ITimeline = {
             end: 1392589451980,
           },
           company: {
-            image: "/companies/TheDoctorChannel.png",
+            image: "/companies/FederalReserveBankOfNewYork.png",
             title: "Federal Reserve Bank Of New York",
             website: "",
           },
@@ -56,7 +56,7 @@ const timeline: ITimeline = {
             end: 1447712719153,
           },
           company: {
-            image: "/companies/TheDoctorChannel.png",
+            image: "/companies/Percolate.png",
             title: "Percolate",
             website: "",
           },
@@ -67,7 +67,7 @@ const timeline: ITimeline = {
             end: 1492381547543,
           },
           company: {
-            image: "/companies/TheDoctorChannel.png",
+            image: "/companies/agorafy.png",
             title: "Agorafy",
             website: "",
           },
@@ -78,7 +78,7 @@ const timeline: ITimeline = {
             end: 1523917577163,
           },
           company: {
-            image: "/companies/TheDoctorChannel.png",
+            image: "/companies/SmartlyIO.png",
             title: "Smartly.io",
             website: "",
           },
@@ -89,7 +89,7 @@ const timeline: ITimeline = {
             end: 1573944142390,
           },
           company: {
-            image: "/companies/TheDoctorChannel.png",
+            image: "/companies/HOVER.png",
             title: "HOVER",
             website: "",
           },
@@ -106,7 +106,7 @@ const timeline: ITimeline = {
             end: 1334616323256,
           },
           company: {
-            image: "/companies/TheDoctorChannel.png",
+            image: "/companies/CHANEL.png",
             title: "CHANEL",
             website: "",
           },
@@ -117,7 +117,7 @@ const timeline: ITimeline = {
             end: 1392590771966,
           },
           company: {
-            image: "/companies/TheDoctorChannel.png",
+            image: "/companies/TanyaTaylor.png",
             title: "TANYA TAYLOR",
             website: "",
           },
@@ -128,7 +128,7 @@ const timeline: ITimeline = {
             end: 1442443646562,
           },
           company: {
-            image: "/companies/TheDoctorChannel.png",
+            image: "/companies/codementor.png",
             title: "codementor",
             website: "",
           },
@@ -150,7 +150,7 @@ const timeline: ITimeline = {
             end: 1500245311925,
           },
           company: {
-            image: "/companies/TheDoctorChannel.png",
+            image: "/companies/AmericanExpress.png",
             title: "AMERICAN EXPRESS",
             website: "",
           },
@@ -161,7 +161,7 @@ const timeline: ITimeline = {
             end: 1550357332723,
           },
           company: {
-            image: "/companies/TheDoctorChannel.png",
+            image: "/companies/codementor.png",
             title: "codementor",
             website: "",
           },
@@ -178,7 +178,7 @@ const timeline: ITimeline = {
             end: 1500245311925,
           },
           company: {
-            image: "/companies/TheDoctorChannel.png",
+            image: "/companies/DATRIXO.png",
             title: "DATRIXO",
             website: "",
           },
@@ -189,7 +189,7 @@ const timeline: ITimeline = {
             end: 1500245311925,
           },
           company: {
-            image: "/companies/TheDoctorChannel.png",
+            image: "/companies/Lemon.png",
             title: "LEMON",
             website: "",
           },
@@ -200,7 +200,7 @@ const timeline: ITimeline = {
             end: 1500245311925,
           },
           company: {
-            image: "/companies/TheDoctorChannel.png",
+            image: "/companies/RMS.png",
             title: "RMS",
             website: "",
           },
@@ -211,7 +211,7 @@ const timeline: ITimeline = {
             end: 1500245311925,
           },
           company: {
-            image: "/companies/TheDoctorChannel.png",
+            image: "/companies/PreMinder.png",
             title: "PreMinder",
             website: "",
           },

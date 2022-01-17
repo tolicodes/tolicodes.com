@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import {
   Container,
@@ -8,6 +8,7 @@ import {
   TimelineYears,
   ExperienceItem,
 } from "./styled";
+import { monthDiff } from "../../../utils/helpers";
 
 export interface IExperience {
   duration: {
@@ -42,6 +43,7 @@ interface TimelineProps {
   timeline: ITimeline;
 }
 const Timeline: React.FC<TimelineProps> = ({ timeline }) => {
+  const yearsRef = useRef();
   const [range, _] = useState<IRangeYear>(() => {
     const r: IRangeYear = { start: 9999, end: -1 };
     for (let i = 0; i < timeline.data.length; i++) {
@@ -64,66 +66,85 @@ const Timeline: React.FC<TimelineProps> = ({ timeline }) => {
 
     return r;
   });
+  const [yearWidth, setYearWidth] = useState(0);
+
+  useEffect(() => {
+    const sidebarWidth = 100;
+    const width =
+      (yearsRef?.current?.clientWidth || sidebarWidth) - sidebarWidth;
+    const singleYearWidth = width / (range.end - range.start);
+    setYearWidth(singleYearWidth);
+  }, []);
 
   const calculatePositionAndWidth = (experienceItem: IExperience) => {
-    /**
-     * Left:
-     * 1. Calculate how much years there are, (end - start) + 1
-     * 2. and how much space are they consuming
-     * Width:
-     * 1. Calculate how much space a single year is consuming
-     * 2. Divide by 12
-     * 3. Calculate area
-     */
-    
+    const start = new Date(experienceItem.duration.start);
+    const end = experienceItem.duration.end
+      ? new Date(experienceItem.duration?.end)
+      : new Date();
+
+    const diff = monthDiff(start, end);
+    const startYear = new Date();
+    startYear.setFullYear(range.start);
+    startYear.setMonth(0);
+    startYear.setDate(1);
+    const startDiff = monthDiff(start, startYear);
+
+    const monthWidth = yearWidth / 12;
+
+    console.log(`-- DEBUG Position -- "${experienceItem.company.title}"`, {
+      yearWidth,
+      start,
+      end,
+      startYear,
+      durationInMonths: diff,
+      leftPadding: startDiff,
+      monthWidth,
+    });
+
     return {
-      left: 0,
-      width: 100,
+      left: monthWidth * startDiff,
+      width: monthWidth * diff,
     };
   };
 
   return (
     <Container>
-      <div>
-        {timeline.data.map((item, index) => (
-          <div key={`${index}`}>
-            <TimelineEntry>
-              <Type>
-                <p>{item.type}</p>
-              </Type>
-              <TimelineExperience>
-                {item.experience.map((exp, index) => {
-                  const { width, left } = calculatePositionAndWidth(exp);
-                  return (
-                    <ExperienceItem
-                      theme={item.color}
-                      key={`${index}`}
-                      width={width}
-                      left={left}
-                    >
-                      {exp.company.image ? (
-                        <Image
-                          src={exp.company.image}
-                          alt={exp.company.title}
-                          width={25}
-                          height={25}
-                        />
-                      ) : (
-                        <p>{exp.company.title}</p>
-                      )}
-                    </ExperienceItem>
-                  );
-                })}
-              </TimelineExperience>
-            </TimelineEntry>
-          </div>
+      {timeline.data.map((item, index) => (
+        <TimelineEntry key={`${index}`}>
+          <Type>{item.type}</Type>
+          <TimelineExperience>
+            {item.experience.map((exp, index) => {
+              const { width, left } = calculatePositionAndWidth(exp);
+              return (
+                <ExperienceItem
+                  theme={item.color}
+                  key={`${index}`}
+                  area={width}
+                  left={left}
+                >
+                  {exp.company.image ? (
+                    <Image
+                      src={exp.company.image}
+                      alt={exp.company.title}
+                      width={25}
+                      height={25}
+                    />
+                  ) : (
+                    <p>{exp.company.title}</p>
+                  )}
+                </ExperienceItem>
+              );
+            })}
+          </TimelineExperience>
+        </TimelineEntry>
+      ))}
+      <TimelineYears ref={yearsRef}>
+        {[...Array(range.end - range.start + 1)].map((_, index) => (
+          <span key={`${index}`}>
+            {index % 2 === 1 ? "" : index + range.start}
+          </span>
         ))}
-        <TimelineYears>
-          {[...Array(range.end - range.start + 1)].map((_, index) => (
-            <p key={`${index}`}>{index % 2 === 1 ? "" : index + range.start}</p>
-          ))}
-        </TimelineYears>
-      </div>
+      </TimelineYears>
     </Container>
   );
 };
