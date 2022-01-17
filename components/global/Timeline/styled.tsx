@@ -17,8 +17,8 @@ interface TimelineEntryProps {}
 export const TimelineEntry = styled.div<TimelineEntryProps>`
   display: flex;
   flex-direction: row;
-  padding: 10px 0;
-  margin-bottom: 10px;
+  padding-bottom: 10px;
+  align-items: center;
 `;
 
 interface TimelineYearsProps {}
@@ -55,7 +55,7 @@ export const TimelineExperience = styled.div<TimelineExperienceProps>`
   display: flex;
   flex-direction: row;
   position: relative;
-  margin-bottom: 10px;
+  height: 50px;
 `;
 
 interface ExperienceItemProps {
@@ -69,4 +69,5 @@ export const ExperienceItem = styled.div<ExperienceItemProps>`
   left: ${(props) => props.left}px;
   width: ${(props) => props.area}px;
   padding: 5px;
+  height: 50px;
 `;

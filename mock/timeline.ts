@@ -8,19 +8,19 @@ const timeline: ITimeline = {
       experience: [
         {
           duration: {
-            start: 1297894920941,
-            end: 1324074152994,
+            start: 1296500400027,
+            end: 1322679600027,
           },
           company: {
-            image: "/companies/TheDoctorChannel.png",
+            image: "/companies/TheDoctorsChannel.png",
             title: "The Doctor's Channel",
             website: "",
           },
         },
         {
           duration: {
-            start: 1329430967249,
-            end: 1347834181464,
+            start: 1328036400523,
+            end: 1349031600523,
           },
           company: {
             image: "/companies/Joonbug.png",
@@ -30,8 +30,8 @@ const timeline: ITimeline = {
         },
         {
           duration: {
-            start: 1353104612281,
-            end: 1366151023496,
+            start: 1354302000933,
+            end: 1372618800933,
           },
           company: {
             image: "/companies/WSJ.png",
@@ -139,7 +139,7 @@ const timeline: ITimeline = {
             end: 1479336483879,
           },
           company: {
-            image: "/companies/TheDoctorChannel.png",
+            image: "/companies/EvenFinancial.png",
             title: "EVEN FINANCIAL",
             website: "",
           },
