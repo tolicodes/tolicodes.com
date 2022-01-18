@@ -22,7 +22,11 @@ export interface IExperience {
     industry?: string;
     technologies?: string[];
   };
-  meta: any | never;
+  meta?: {
+    width: number;
+    left: number;
+    level: number;
+  };
 }
 
 export interface ITimelineEntry {
@@ -160,9 +164,9 @@ const Timeline: React.FC<TimelineProps> = ({ timeline }) => {
                 <ExperienceItem
                   theme={item.color}
                   key={`${index}`}
-                  area={exp.meta.width}
-                  left={exp.meta.left}
-                  level={exp.meta.level}
+                  area={exp.meta?.width || 0}
+                  left={exp.meta?.left || 0}
+                  level={exp.meta?.level || 0}
                 >
                   {exp.company.image ? (
                     <div>
