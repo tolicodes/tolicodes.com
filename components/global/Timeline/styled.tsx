@@ -51,14 +51,16 @@ export const TimelineYears = styled.div<TimelineYearsProps>`
   }
 `;
 
-interface TimelineExperienceProps {}
+interface TimelineExperienceProps {
+  depth: number;
+}
 export const TimelineExperience = styled.div<TimelineExperienceProps>`
   display: flex;
   flex-direction: row;
   position: relative;
-  height: 50px;
   width: 100%;
   margin: 0 20px;
+  height: ${(props) => props.depth * 60}px;
 `;
 
 interface ExperienceItemProps {
@@ -76,7 +78,7 @@ export const ExperienceItem = styled.div<ExperienceItemProps>`
   height: 50px;
   display: flex;
   align-items: center;
-  margin-top: ${(props) => props.level * 50}px;
+  margin-top: ${(props) => props.level * 60}px;
 
   > div {
     position: relative;

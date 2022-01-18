@@ -23,9 +23,9 @@ export interface IExperience {
     technologies?: string[];
   };
   meta?: {
-    width: number;
-    left: number;
-    level: number;
+    width?: number;
+    left?: number;
+    level?: number;
   };
 }
 
@@ -33,6 +33,9 @@ export interface ITimelineEntry {
   type: string;
   color: string;
   experience: IExperience[];
+  meta?: {
+    depth: number;
+  };
 }
 
 export interface ITimeline {
@@ -76,12 +79,18 @@ const Timeline: React.FC<TimelineProps> = ({ timeline }) => {
     const _timeline = { data: [...timeline.data] };
     // Calculate Level, Left & Width
     for (let i = 0; i < _timeline.data.length; i++) {
+      let depth = 0;
       for (let j = 0; j < _timeline.data[i].experience.length; j++) {
+        if ((_timeline.data[i].experience[j].meta?.level || 0) > depth) {
+          depth = _timeline.data[i].experience[j].meta?.level || depth;
+        }
+
         _timeline.data[i].experience[j].meta = {
           ...calculatePositionAndWidth(_timeline.data[i].experience[j]),
-          level: 0, // TODO: Calculate
+          level: _timeline.data[i].experience[j].meta?.level || 0, // TODO: Calculate overlap & give levels based on that
         };
       }
+      _timeline.data[i].meta = { depth: depth + 1 };
     }
 
     setProcessedTimeline(_timeline);
@@ -119,7 +128,9 @@ const Timeline: React.FC<TimelineProps> = ({ timeline }) => {
   };
 
   const calculatePositionAndWidth = (experienceItem: IExperience) => {
-    if (!range) return { left: 0, width: 0 };
+    if (!range) {
+      return { left: 0, width: 0 };
+    }
 
     const start = new Date();
     start.setDate(1);
@@ -158,7 +169,7 @@ const Timeline: React.FC<TimelineProps> = ({ timeline }) => {
       {processedTimeline.data.map((item, index) => (
         <TimelineEntry key={`${index}`}>
           <Type>{item.type}</Type>
-          <TimelineExperience>
+          <TimelineExperience depth={item.meta?.depth || 1}>
             {item.experience.map((exp, index) => {
               return (
                 <ExperienceItem

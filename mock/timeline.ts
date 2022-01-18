@@ -344,6 +344,9 @@ const timeline: ITimeline = {
           company: {
             title: "PHP",
           },
+          meta: {
+            level: 0
+          }
         },
         {
           duration: {
@@ -359,6 +362,9 @@ const timeline: ITimeline = {
           company: {
             title: "Backbone",
           },
+          meta: {
+            level: 0
+          }
         },
         {
           duration: {
@@ -374,6 +380,9 @@ const timeline: ITimeline = {
           company: {
             title: "React",
           },
+          meta: {
+            level: 0
+          }
         },
         {
           duration: {
@@ -389,6 +398,9 @@ const timeline: ITimeline = {
           company: {
             title: "D3.js",
           },
+          meta: {
+            level: 1
+          }
         },
         {
           duration: {
@@ -404,6 +416,9 @@ const timeline: ITimeline = {
           company: {
             title: "Node.js",
           },
+          meta: {
+            level: 1
+          }
         },
       ],
     },
