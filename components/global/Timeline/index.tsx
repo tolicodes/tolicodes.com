@@ -53,29 +53,31 @@ interface TimelineProps {
 const Timeline: React.FC<TimelineProps> = ({ timeline }) => {
   const yearsRef = useRef<HTMLDivElement>(null);
   const [range, setRange] = useState<IRangeYear | null>(null);
-  const [yearWidth, setYearWidth] = useState(0);
+  const [yearWidth, setYearWidth] = useState<number>(0);
   const [processedTimeline, setProcessedTimeline] = useState<ITimeline | null>(
     null
   );
 
   useEffect(() => {
-    // Initialize
-    init(timeline);
+    setRange({ ...calculateRange(timeline) });
   }, [timeline]);
 
   useEffect(() => {
-    if (!yearsRef.current || !range) return;
+    window.addEventListener("resize", () => {
+      calculateYearWidth();
+    });
 
-    const width = yearsRef?.current?.clientWidth - 40;
-    const singleYearWidth = width / (range.end - range.start);
-    setYearWidth(singleYearWidth);
+    return () => {
+      window.removeEventListener("resize", () => {});
+    };
+  });
+
+  useEffect(() => {
+    calculateYearWidth();
   }, [range]);
 
-  const init = (timeline: ITimeline) => {
-    // Calculate Range
-    const _range = calculateRange(timeline);
-    setRange(_range);
-
+  useEffect(() => {
+    // process timeline
     const _timeline = { data: [...timeline.data] };
     // Calculate Level, Left & Width
     for (let i = 0; i < _timeline.data.length; i++) {
@@ -93,7 +95,15 @@ const Timeline: React.FC<TimelineProps> = ({ timeline }) => {
       _timeline.data[i].meta = { depth: depth + 1 };
     }
 
-    setProcessedTimeline(_timeline);
+    setProcessedTimeline({ ..._timeline });
+  }, [yearWidth]);
+
+  const calculateYearWidth = () => {
+    if (!yearsRef.current || !range) return;
+
+    const width = yearsRef?.current?.clientWidth - 40;
+    const singleYearWidth = width / (range.end - range.start);
+    setYearWidth(singleYearWidth);
   };
 
   const calculateRange = (_timeline: ITimeline) => {
@@ -128,9 +138,7 @@ const Timeline: React.FC<TimelineProps> = ({ timeline }) => {
   };
 
   const calculatePositionAndWidth = (experienceItem: IExperience) => {
-    if (!range) {
-      return { left: 0, width: 0 };
-    }
+    if (!range) return;
 
     const start = new Date();
     start.setDate(1);
