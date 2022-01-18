@@ -189,15 +189,11 @@ const Timeline: React.FC<TimelineProps> = ({ timeline }) => {
         </TimelineEntry>
       ))}
       <TimelineYears ref={yearsRef}>
-        {range ? (
-          <>
-            {[...Array(range.end - range.start + 1)].map((_, index) => (
-              <span key={`${index}`}>
-                {index % 2 === 1 ? "" : index + range.start}
-              </span>
-            ))}
-          </>
-        ) : null}
+        {[...Array(range.end - range.start + 1)].map((_, index) => (
+          <span key={`${index}`}>
+            {index % 2 === 1 ? "" : index + range.start}
+          </span>
+        ))}
       </TimelineYears>
     </Container>
   );
