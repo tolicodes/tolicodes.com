@@ -8,8 +8,14 @@ const timeline: ITimeline = {
       experience: [
         {
           duration: {
-            start: 1296500400027,
-            end: 1322679600027,
+            start: {
+              month: 1,
+              year: 2011,
+            },
+            end: {
+              month: 6,
+              year: 2011,
+            },
           },
           company: {
             image: "/companies/TheDoctorsChannel.png",
@@ -19,8 +25,14 @@ const timeline: ITimeline = {
         },
         {
           duration: {
-            start: 1328036400523,
-            end: 1349031600523,
+            start: {
+              month: 10,
+              year: 2011,
+            },
+            end: {
+              month: 7,
+              year: 2012,
+            },
           },
           company: {
             image: "/companies/Joonbug.png",
@@ -30,8 +42,14 @@ const timeline: ITimeline = {
         },
         {
           duration: {
-            start: 1354302000933,
-            end: 1372618800933,
+            start: {
+              month: 8,
+              year: 2012,
+            },
+            end: {
+              month: 5,
+              year: 2013,
+            },
           },
           company: {
             image: "/companies/WSJ.png",
@@ -41,8 +59,14 @@ const timeline: ITimeline = {
         },
         {
           duration: {
-            start: 1371421437347,
-            end: 1392589451980,
+            start: {
+              month: 6,
+              year: 2013,
+            },
+            end: {
+              month: 6,
+              year: 2014,
+            },
           },
           company: {
             image: "/companies/FederalReserveBankOfNewYork.png",
@@ -52,8 +76,14 @@ const timeline: ITimeline = {
         },
         {
           duration: {
-            start: 1416176703098,
-            end: 1447712719153,
+            start: {
+              month: 10,
+              year: 2014,
+            },
+            end: {
+              month: 4,
+              year: 2015,
+            },
           },
           company: {
             image: "/companies/Percolate.png",
@@ -63,8 +93,14 @@ const timeline: ITimeline = {
         },
         {
           duration: {
-            start: 1479335134645,
-            end: 1492381547543,
+            start: {
+              month: 10,
+              year: 2016,
+            },
+            end: {
+              month: 4,
+              year: 2017,
+            },
           },
           company: {
             image: "/companies/agorafy.png",
@@ -74,8 +110,14 @@ const timeline: ITimeline = {
         },
         {
           duration: {
-            start: 1505600759563,
-            end: 1523917577163,
+            start: {
+              month: 9,
+              year: 2017,
+            },
+            end: {
+              month: 11,
+              year: 2017,
+            },
           },
           company: {
             image: "/companies/SmartlyIO.png",
@@ -85,8 +127,14 @@ const timeline: ITimeline = {
         },
         {
           duration: {
-            start: 1518819987480,
-            end: 1573944142390,
+            start: {
+              month: 1,
+              year: 2018,
+            },
+            end: {
+              month: 12,
+              year: 2018,
+            },
           },
           company: {
             image: "/companies/HOVER.png",
@@ -102,8 +150,14 @@ const timeline: ITimeline = {
       experience: [
         {
           duration: {
-            start: 1313534682635,
-            end: 1334616323256,
+            start: {
+              month: 6,
+              year: 2011,
+            },
+            end: {
+              month: 3,
+              year: 2012,
+            },
           },
           company: {
             image: "/companies/CHANEL.png",
@@ -113,8 +167,14 @@ const timeline: ITimeline = {
         },
         {
           duration: {
-            start: 1366152350582,
-            end: 1392590771966,
+            start: {
+              month: 6,
+              year: 2013,
+            },
+            end: {
+              month: 3,
+              year: 2014,
+            },
           },
           company: {
             image: "/companies/TanyaTaylor.png",
@@ -124,8 +184,14 @@ const timeline: ITimeline = {
         },
         {
           duration: {
-            start: 1400280383446,
-            end: 1442443646562,
+            start: {
+              month: 5,
+              year: 2014,
+            },
+            end: {
+              month: 5,
+              year: 2015,
+            },
           },
           company: {
             image: "/companies/codementor.png",
@@ -135,8 +201,14 @@ const timeline: ITimeline = {
         },
         {
           duration: {
-            start: 1468709213449,
-            end: 1479336483879,
+            start: {
+              month: 6,
+              year: 2015,
+            },
+            end: {
+              month: 5,
+              year: 2016,
+            },
           },
           company: {
             image: "/companies/EvenFinancial.png",
@@ -146,8 +218,14 @@ const timeline: ITimeline = {
         },
         {
           duration: {
-            start: 1492382898725,
-            end: 1500245311925,
+            start: {
+              month: 4,
+              year: 2017,
+            },
+            end: {
+              month: 7,
+              year: 2017,
+            },
           },
           company: {
             image: "/companies/AmericanExpress.png",
@@ -157,8 +235,14 @@ const timeline: ITimeline = {
         },
         {
           duration: {
-            start: 1513464521556,
-            end: 1550357332723,
+            start: {
+              month: 1,
+              year: 2018,
+            },
+            end: {
+              month: 11,
+              year: 2018,
+            },
           },
           company: {
             image: "/companies/codementor.png",
@@ -174,8 +258,14 @@ const timeline: ITimeline = {
       experience: [
         {
           duration: {
-            start: 1492382898725,
-            end: 1500245311925,
+            start: {
+              month: 1,
+              year: 2011,
+            },
+            end: {
+              month: 9,
+              year: 2012,
+            },
           },
           company: {
             image: "/companies/DATRIXO.png",
@@ -185,8 +275,14 @@ const timeline: ITimeline = {
         },
         {
           duration: {
-            start: 1492382898725,
-            end: 1500245311925,
+            start: {
+              month: 10,
+              year: 2012,
+            },
+            end: {
+              month: 12,
+              year: 2014,
+            },
           },
           company: {
             image: "/companies/Lemon.png",
@@ -196,8 +292,14 @@ const timeline: ITimeline = {
         },
         {
           duration: {
-            start: 1492382898725,
-            end: 1500245311925,
+            start: {
+              month: 4,
+              year: 2014,
+            },
+            end: {
+              month: 7,
+              year: 2015,
+            },
           },
           company: {
             image: "/companies/RMS.png",
@@ -207,8 +309,14 @@ const timeline: ITimeline = {
         },
         {
           duration: {
-            start: 1492382898725,
-            end: 1500245311925,
+            start: {
+              month: 9,
+              year: 2015,
+            },
+            end: {
+              month: 3,
+              year: 2017,
+            },
           },
           company: {
             image: "/companies/PreMinder.png",
@@ -224,8 +332,14 @@ const timeline: ITimeline = {
       experience: [
         {
           duration: {
-            start: 1492382898725,
-            end: 1500245311925,
+            start: {
+              month: 1,
+              year: 2011,
+            },
+            end: {
+              month: 8,
+              year: 2012,
+            },
           },
           company: {
             title: "PHP",
@@ -233,8 +347,14 @@ const timeline: ITimeline = {
         },
         {
           duration: {
-            start: 1492382898725,
-            end: 1500245311925,
+            start: {
+              month: 12,
+              year: 2012,
+            },
+            end: {
+              month: 8,
+              year: 2015,
+            },
           },
           company: {
             title: "Backbone",
@@ -242,31 +362,49 @@ const timeline: ITimeline = {
         },
         {
           duration: {
-            start: 1492382898725,
-            end: 1500245311925,
+            start: {
+              month: 9,
+              year: 2015,
+            },
+            end: {
+              month: 12,
+              year: 2018,
+            },
           },
           company: {
             title: "React",
           },
         },
-        {
-          duration: {
-            start: 1492382898725,
-            end: 1500245311925,
-          },
-          company: {
-            title: "D3.js",
-          },
-        },
-        {
-          duration: {
-            start: 1492382898725,
-            end: 1500245311925,
-          },
-          company: {
-            title: "Node.js",
-          },
-        },
+        // {
+        //   duration: {
+        //     start: {
+        //       month: 8,
+        //       year: 2012,
+        //     },
+        //     end: {
+        //       month: 3,
+        //       year: 2014,
+        //     },
+        //   },
+        //   company: {
+        //     title: "D3.js",
+        //   },
+        // },
+        // {
+        //   duration: {
+        //     start: {
+        //       month: 1,
+        //       year: 2015,
+        //     },
+        //     end: {
+        //       month: 12,
+        //       year: 2018,
+        //     },
+        //   },
+        //   company: {
+        //     title: "Node.js",
+        //   },
+        // },
       ],
     },
   ],

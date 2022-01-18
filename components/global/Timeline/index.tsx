@@ -12,8 +12,8 @@ import { monthDiff } from "../../../utils/helpers";
 
 export interface IExperience {
   duration: {
-    start: number;
-    end?: number;
+    start: { month: number; year: number };
+    end?: { month: number; year: number };
   };
   company: {
     image?: string;
@@ -48,10 +48,17 @@ const Timeline: React.FC<TimelineProps> = ({ timeline }) => {
     const r: IRangeYear = { start: 9999, end: -1 };
     for (let i = 0; i < timeline.data.length; i++) {
       for (let j = 0; j < timeline.data[i].experience.length; j++) {
-        let s = new Date(timeline.data[i].experience[j].duration.start);
+        const { start, end } = timeline.data[i].experience[j].duration;
+
+        const s = new Date();
+        s.setFullYear(start.year);
+        s.setMonth(start.month - 1);
+
         let e = null;
-        if (timeline.data[i].experience[j].duration.end) {
-          e = new Date(timeline.data[i].experience[j].duration.end || 0);
+        if (end) {
+          e = new Date();
+          e.setFullYear(end.year);
+          e.setMonth(end.month - 1);
         }
 
         if (s.getFullYear() < r.start) {
@@ -64,6 +71,7 @@ const Timeline: React.FC<TimelineProps> = ({ timeline }) => {
       }
     }
 
+    r.end++;
     return r;
   });
   const [yearWidth, setYearWidth] = useState(0);
@@ -77,10 +85,15 @@ const Timeline: React.FC<TimelineProps> = ({ timeline }) => {
   }, []);
 
   const calculatePositionAndWidth = (experienceItem: IExperience) => {
-    const start = new Date(experienceItem.duration.start);
-    const end = experienceItem.duration.end
-      ? new Date(experienceItem.duration?.end)
-      : new Date();
+    const start = new Date();
+    start.setFullYear(experienceItem.duration.start.year);
+    start.setMonth(experienceItem.duration.start.month);
+
+    const end = new Date();
+    if (experienceItem.duration.end) {
+      end.setFullYear(experienceItem.duration.end.year);
+      end.setMonth(experienceItem.duration.end.month);
+    }
 
     const diff = monthDiff(start, end);
     const startYear = new Date();
@@ -88,18 +101,15 @@ const Timeline: React.FC<TimelineProps> = ({ timeline }) => {
     startYear.setMonth(0);
     startYear.setDate(1);
     const startDiff = monthDiff(start, startYear);
-
     const monthWidth = yearWidth / 12;
 
-    console.log(`-- DEBUG Position -- "${experienceItem.company.title}"`, {
-      yearWidth,
-      start,
-      end,
-      startYear,
-      durationInMonths: diff,
-      leftPadding: startDiff,
-      monthWidth,
-    });
+    // console.log(`-- DEBUG Position -- "${experienceItem.company.title}"`, {
+    //   yearWidth,
+    //   start: { m: start.getMonth() },
+    //   startDiff,
+    //   durationInMonths: diff,
+    //   monthWidth,
+    // });
 
     return {
       left: monthWidth * startDiff,
