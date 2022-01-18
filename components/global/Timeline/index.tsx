@@ -77,13 +77,8 @@ const Timeline: React.FC<TimelineProps> = ({ timeline }) => {
   const [yearWidth, setYearWidth] = useState(0);
 
   useEffect(() => {
-    const sidebarWidth = 100;
-    // const width = 918;
-    // const width =
-    //   (yearsRef?.current?.clientWidth || sidebarWidth) - sidebarWidth;
-    const width = (yearsRef?.current?.clientWidth || sidebarWidth) - 40;
+    const width = yearsRef?.current?.clientWidth - 40;
     const singleYearWidth = width / (range.end - range.start);
-    console.log({ width, singleYearWidth });
     setYearWidth(singleYearWidth);
   }, [range]);
 
@@ -111,22 +106,6 @@ const Timeline: React.FC<TimelineProps> = ({ timeline }) => {
     startYear.setDate(1);
     const startDiff = monthDiff(start, startYear);
     const monthWidth = yearWidth / 12;
-
-    // console.clear();
-    // console.log(`-- DEBUG Position -- "${experienceItem.company.title}"`, {
-    //   end,
-    //   start,
-    //   diff,
-    //   yearWidth,
-    //   monthWidth,
-    //   startDiff,
-    //   left: monthWidth * startDiff,
-    //   //   yearWidth,
-    //   //   start: { m: start.getMonth() },
-    //   //   startDiff,
-    //   //   durationInMonths: diff,
-    //   //   monthWidth,
-    // });
 
     return {
       left: monthWidth * startDiff,

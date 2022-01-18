@@ -375,36 +375,36 @@ const timeline: ITimeline = {
             title: "React",
           },
         },
-        // {
-        //   duration: {
-        //     start: {
-        //       month: 8,
-        //       year: 2012,
-        //     },
-        //     end: {
-        //       month: 3,
-        //       year: 2014,
-        //     },
-        //   },
-        //   company: {
-        //     title: "D3.js",
-        //   },
-        // },
-        // {
-        //   duration: {
-        //     start: {
-        //       month: 1,
-        //       year: 2015,
-        //     },
-        //     end: {
-        //       month: 12,
-        //       year: 2018,
-        //     },
-        //   },
-        //   company: {
-        //     title: "Node.js",
-        //   },
-        // },
+        {
+          duration: {
+            start: {
+              month: 8,
+              year: 2012,
+            },
+            end: {
+              month: 3,
+              year: 2014,
+            },
+          },
+          company: {
+            title: "D3.js",
+          },
+        },
+        {
+          duration: {
+            start: {
+              month: 1,
+              year: 2015,
+            },
+            end: {
+              month: 12,
+              year: 2018,
+            },
+          },
+          company: {
+            title: "Node.js",
+          },
+        },
       ],
     },
   ],
