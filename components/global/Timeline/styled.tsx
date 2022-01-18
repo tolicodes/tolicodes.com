@@ -65,6 +65,7 @@ interface ExperienceItemProps {
   theme: string;
   area: number;
   left: number;
+  level: number;
 }
 export const ExperienceItem = styled.div<ExperienceItemProps>`
   background-color: ${(props) => props.theme};
@@ -75,6 +76,7 @@ export const ExperienceItem = styled.div<ExperienceItemProps>`
   height: 50px;
   display: flex;
   align-items: center;
+  margin-top: ${(props) => props.level * 50}px;
 
   > div {
     position: relative;
