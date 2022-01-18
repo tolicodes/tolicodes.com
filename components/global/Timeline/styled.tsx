@@ -9,6 +9,7 @@ export const Container = styled.div<ContainerProps>`
 interface TypeProps {}
 export const Type = styled.p<TypeProps>`
   width: 100px;
+  min-width: 100px;
   font-weight: bold;
   font-size: 14px;
 `;
@@ -56,6 +57,8 @@ export const TimelineExperience = styled.div<TimelineExperienceProps>`
   flex-direction: row;
   position: relative;
   height: 50px;
+  width: 100%;
+  margin: 0 20px;
 `;
 
 interface ExperienceItemProps {
@@ -68,6 +71,14 @@ export const ExperienceItem = styled.div<ExperienceItemProps>`
   position: absolute;
   left: ${(props) => props.left}px;
   width: ${(props) => props.area}px;
-  padding: 5px;
+  padding: 8px;
   height: 50px;
+  display: flex;
+  align-items: center;
+
+  > div {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
 `;

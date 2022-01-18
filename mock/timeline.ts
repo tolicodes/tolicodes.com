@@ -280,7 +280,7 @@ const timeline: ITimeline = {
               year: 2012,
             },
             end: {
-              month: 12,
+              month: 2,
               year: 2014,
             },
           },
