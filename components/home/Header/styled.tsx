@@ -16,20 +16,6 @@ export const NavWrapper = styled.div<NavWrapperProps>`
   justify-content: center;
 `;
 
-interface LogoProps {}
-export const Logo = styled.div<LogoProps>`
-  font-family: "PT Mono", monospace;
-  text-align: center;
-
-  h1 {
-    font-size: 34px;
-  }
-
-  p {
-    font-size: 14px;
-  }
-`;
-
 interface SocialMediaLinksProps {}
 export const SocialMediaLinks = styled.div<SocialMediaLinksProps>`
   display: flex;
@@ -86,10 +72,5 @@ export const WatchMyStory = styled.section<WatchMyStoryProps>`
   h1 {
     margin: 20px;
     font-family: "PT Mono", monospace;
-  }
-
-  iframe {
-    width: 100%;
-    min-height: 70vh;
   }
 `;

@@ -2,12 +2,13 @@ import React from "react";
 import Image from "next/image";
 import {
   Container,
-  Logo,
   SocialMediaLinks,
   Navbar,
   WatchMyStory,
   NavWrapper,
 } from "./styled";
+import SocialIcon from "../../global/SocialIcon";
+import YouTube from "react-youtube";
 
 interface HeaderProps {}
 
@@ -15,41 +16,23 @@ const Header = ({}: HeaderProps) => {
   return (
     <Container>
       <NavWrapper>
-        <Logo>
-          <h1>
-            toli&lt;<strong>codes</strong>&gt;
-          </h1>
-          <p>Anatoliy D. Zaslavskiy</p>
-        </Logo>
+        <Image src="/logo.png" height={55} width={225} objectFit="contain" />
         <SocialMediaLinks>
-          <a href={"https://linkedin.com"} target={"_blank"} rel={"noreferrer"}>
-            <Image
-              src={"/icons/linkedin.svg"}
-              alt={"LinkedIn"}
-              width={"22px"}
-              height={"22px"}
-            />
-          </a>
-          <a href={"https://github.com"} target={"_blank"} rel={"noreferrer"}>
-            <Image
-              src={"/icons/github.svg"}
-              alt={"GitHub"}
-              width={"22px"}
-              height={"22px"}
-            />
-          </a>
-          <a
-            href={"mail:contact@webaddress.com"}
-            target={"_blank"}
-            rel={"noreferrer"}
-          >
-            <Image
-              src={"/icons/email.svg"}
-              alt={"Email"}
-              width={"22px"}
-              height={"22px"}
-            />
-          </a>
+          <SocialIcon
+            src="/icons/linkedin.svg"
+            href="https://linkedin.com"
+            size={22}
+          />
+          <SocialIcon
+            src="/icons/github.svg"
+            href="https://github.com"
+            size={22}
+          />
+          <SocialIcon
+            src="/icons/email.svg"
+            href="mail:contact@webaddress.com"
+            size={22}
+          />
         </SocialMediaLinks>
         <Navbar>
           <ul>
@@ -79,14 +62,15 @@ const Header = ({}: HeaderProps) => {
       </NavWrapper>
       <WatchMyStory>
         <h1>Watch My Story</h1>
-        <iframe
-          src={"https://www.youtube.com/embed/z1VNwapOb8E"}
-          title={"How I Learned Empathy with Asperger's | Anatoliy Zaslavskiy"}
-          frameBorder={0}
-          allow={
-            "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          }
-          allowFullScreen={true}
+        <YouTube
+          videoId="z1VNwapOb8E"
+          opts={{
+            height: "540",
+            width: "100%",
+            playerVars: {
+              autoplay: 0,
+            },
+          }}
         />
       </WatchMyStory>
     </Container>
