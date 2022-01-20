@@ -1,3 +1,4 @@
 import Header from "./Header";
+import Resume from "./Resume";
 
-export { Header };
+export { Header, Resume };
