@@ -1,20 +1,15 @@
 import React from "react";
 import Image from "next/image";
-import {
-  Container,
-  SocialMediaLinks,
-  Navbar,
-  WatchMyStory,
-  NavWrapper,
-} from "./styled";
+import { SocialMediaLinks, Navbar, WatchMyStory, NavWrapper } from "./styled";
 import SocialIcon from "../../global/SocialIcon";
 import YouTube from "react-youtube";
+import { Flex } from "@chakra-ui/react";
 
 interface HeaderProps {}
 
 const Header = ({}: HeaderProps) => {
   return (
-    <Container>
+    <Flex direction="column">
       <NavWrapper>
         <Image src="/logo.png" height={55} width={225} objectFit="contain" />
         <SocialMediaLinks>
@@ -22,16 +17,19 @@ const Header = ({}: HeaderProps) => {
             src="/icons/linkedin.svg"
             href="https://linkedin.com"
             size={22}
+            alt="LinkedIn"
           />
           <SocialIcon
             src="/icons/github.svg"
             href="https://github.com"
             size={22}
+            alt="Github"
           />
           <SocialIcon
             src="/icons/email.svg"
             href="mail:contact@webaddress.com"
             size={22}
+            alt="E-Mail"
           />
         </SocialMediaLinks>
         <Navbar>
@@ -73,7 +71,7 @@ const Header = ({}: HeaderProps) => {
           }}
         />
       </WatchMyStory>
-    </Container>
+    </Flex>
   );
 };
 
