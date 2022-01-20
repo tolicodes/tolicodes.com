@@ -12,3 +12,7 @@ Object.defineProperty(NextImage, "default", {
     />
   ),
 });
+
+export const parameters = {
+  chakra: {},
+};
