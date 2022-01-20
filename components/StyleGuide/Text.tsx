@@ -9,8 +9,8 @@ export const Title = styled.h1<TitleProps>`
   margin: 20px;
 `;
 
-interface TypeProps {}
-export const Type = styled.p<TypeProps>`
+interface TextProps {}
+export const Text = styled.p<TextProps>`
   width: 100px;
   min-width: 100px;
   font-weight: bold;

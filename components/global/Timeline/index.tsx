@@ -8,7 +8,7 @@ import {
   ExperienceItem,
   TimelineYearLabel,
 } from "./styled";
-import { Type } from "../../StyleGuide/Text";
+import { Text } from "../../StyleGuide/Text";
 import { monthDiff } from "../../../utils/helpers";
 
 export interface IExperience {
@@ -177,7 +177,7 @@ const Timeline: React.FC<TimelineProps> = ({ timeline }) => {
     <Container>
       {processedTimeline.data.map((item, index) => (
         <TimelineEntry key={`${index}`}>
-          <Type>{item.type}</Type>
+          <Text>{item.type}</Text>
           <TimelineExperience depth={item.meta?.depth || 1}>
             {item.experience.map((exp, index) => {
               return (
