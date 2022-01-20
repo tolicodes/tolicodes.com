@@ -3,9 +3,10 @@ import React from "react";
 import SectionWrapper from ".";
 
 describe("<SectionWrapper/>", () => {
-  test("SectionWrapper", () => {
-    expect(() => {
-      render(<SectionWrapper title="Test" />);
-    }).not.toThrowError();
+  const title = "TEST";
+  const { getByText } = render(<SectionWrapper title={title} />);
+
+  test("Contains title", () => {
+    expect(getByText(title)).toBeInTheDocument();
   });
 });
