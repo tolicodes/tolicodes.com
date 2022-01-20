@@ -1,5 +1,6 @@
 import React from "react";
-import { Container, Title } from "./styled";
+import { Container } from "./styled";
+import { Title } from "../../StyleGuide/Text";
 
 interface SectionWrapperProps {
   title: string;

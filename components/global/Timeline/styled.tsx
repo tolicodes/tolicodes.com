@@ -6,14 +6,6 @@ export const Container = styled.div<ContainerProps>`
   padding: 16px;
 `;
 
-interface TypeProps {}
-export const Type = styled.p<TypeProps>`
-  width: 100px;
-  min-width: 100px;
-  font-weight: bold;
-  font-size: 14px;
-`;
-
 interface TimelineEntryProps {}
 export const TimelineEntry = styled.div<TimelineEntryProps>`
   display: flex;

@@ -4,10 +4,10 @@ import {
   Container,
   TimelineEntry,
   TimelineExperience,
-  Type,
   TimelineYears,
   ExperienceItem,
 } from "./styled";
+import { Type } from "../../StyleGuide/Text";
 import { monthDiff } from "../../../utils/helpers";
 
 export interface IExperience {
