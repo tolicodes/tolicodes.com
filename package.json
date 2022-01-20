@@ -1,8 +1,53 @@
 {
-  "name": "tolicodes.com",
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": "https://github.com/tolicodes/tolicodes.com.git",
-  "author": "Anatoliy Zaslavskiy <toli@oselot.com>",
-  "license": "MIT"
+  "name": "tolicodes",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "test": "jest --watch",
+    "lint": "next lint",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "dependencies": {
+    "@chakra-ui/react": "^1.7.4",
+    "@emotion/react": "^11",
+    "@emotion/styled": "^11",
+    "framer-motion": "^5",
+    "next": "12.0.7",
+    "prettier": "^2.5.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-youtube": "^7.14.0",
+    "sass": "^1.47.0",
+    "styled-components": "^5.3.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.7",
+    "@chakra-ui/storybook-addon": "^1.0.1",
+    "@storybook/addon-actions": "^6.4.10",
+    "@storybook/addon-links": "^6.4.10",
+    "@storybook/addons": "^5.3.22",
+    "@storybook/react": "^6.4.10",
+    "@testing-library/jest-dom": "^5.16.1",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.4.0",
+    "@types/mocha": "^9.0.0",
+    "@types/node": "17.0.8",
+    "@types/react": "17.0.38",
+    "@types/styled-components": "^5.1.19",
+    "babel-jest": "^27.4.6",
+    "babel-loader": "^8.2.3",
+    "chromatic": "^6.3.4",
+    "eslint": "8.6.0",
+    "eslint-config-next": "12.0.7",
+    "jest": "^27.4.7",
+    "storybook-addon-sass-postcss": "^0.1.0",
+    "typescript": "4.5.4"
+  },
+  "resolutions": {
+    "styled-components": "^5"
+  }
 }
