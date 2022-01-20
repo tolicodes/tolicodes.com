@@ -1,5 +1,11 @@
 import styled from "styled-components";
 
+interface ContainerProps {}
+export const Container = styled.div<ContainerProps>`
+  display: flex;
+  flex-direction: column;
+`;
+
 interface NavWrapperProps {}
 export const NavWrapper = styled.div<NavWrapperProps>`
   background-color: #ff652e;
