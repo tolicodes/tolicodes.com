@@ -1,14 +1,15 @@
 import React from "react";
 import Image from "next/image";
-import { Container, SocialMediaLinks, Navbar, WatchMyStory, NavWrapper } from "./styled";
+import { SocialMediaLinks, Navbar, WatchMyStory, NavWrapper } from "./styled";
 import SocialIcon from "../../global/SocialIcon";
 import YouTube from "react-youtube";
+import { Flex } from "@chakra-ui/react";
 
 interface HeaderProps {}
 
 const Header = ({}: HeaderProps) => {
   return (
-    <Container>
+    <Flex direction="column">
       <NavWrapper>
         <Image src="/logo.png" height={55} width={225} objectFit="contain" />
         <SocialMediaLinks>
@@ -70,7 +71,7 @@ const Header = ({}: HeaderProps) => {
           }}
         />
       </WatchMyStory>
-    </Container>
+    </Flex>
   );
 };
 
