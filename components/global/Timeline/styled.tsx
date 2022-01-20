@@ -21,25 +21,26 @@ export const TimelineYears = styled.div<TimelineYearsProps>`
   flex-direction: row;
   justify-content: space-between;
   margin-top: 20px;
+`;
 
-  span {
-    position: relative;
-    margin-top: 10px;
-    padding-top: 10px;
-    font-weight: 600;
-    min-width: 40px;
-    text-align: center;
+interface TimelineYearLabelProps {}
+export const TimelineYearLabel = styled.span<TimelineYearLabelProps>`
+  position: relative;
+  margin-top: 10px;
+  padding-top: 10px;
+  font-weight: 600;
+  min-width: 40px;
+  text-align: center;
 
-    &:after {
-      content: "";
-      position: absolute;
-      top: -10px;
-      height: 7px;
-      left: 50%;
-      width: 1px;
-      background-color: black;
-      transform: translate(-50%);
-    }
+  &:after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    height: 7px;
+    left: 50%;
+    width: 1px;
+    background-color: black;
+    transform: translate(-50%);
   }
 `;
 

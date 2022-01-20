@@ -6,6 +6,7 @@ import {
   TimelineExperience,
   TimelineYears,
   ExperienceItem,
+  TimelineYearLabel,
 } from "./styled";
 import { Type } from "../../StyleGuide/Text";
 import { monthDiff } from "../../../utils/helpers";
@@ -209,9 +210,9 @@ const Timeline: React.FC<TimelineProps> = ({ timeline }) => {
       ))}
       <TimelineYears ref={yearsRef}>
         {[...Array(range.end - range.start + 1)].map((_, index) => (
-          <span key={`${index}`}>
+          <TimelineYearLabel key={`${index}`}>
             {index % 2 === 1 ? "" : index + range.start}
-          </span>
+          </TimelineYearLabel>
         ))}
       </TimelineYears>
     </Container>

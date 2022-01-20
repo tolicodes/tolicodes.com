@@ -39,41 +39,44 @@ export const SocialMediaLinks = styled.div<SocialMediaLinksProps>`
   margin: 16px 0;
 `;
 
+interface NavbarItemsProps {}
+export const NavbarItems = styled.ul<NavbarItemsProps>`
+  grid-auto-columns: 1fr;
+  grid-auto-flow: column;
+  column-gap: 2px;
+  padding-left: 0;
+  display: grid;
+  height: 100%;
+  margin: 0;
+`;
+
+interface NavbarItemProps {}
+export const NavbarItem = styled.li<NavbarItemProps>`
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+`;
+
+interface NavbarItemLinkProps {}
+export const NavbarItemLink = styled.a<NavbarItemLinkProps>`
+  width: 100%;
+  height: 100%;
+  color: #ff652e;
+  line-height: 40px;
+  text-align: center;
+  white-space: nowrap;
+  background-color: #272727;
+
+  &:hover {
+    background-color: #111111;
+  }
+`;
+
 interface NavbarProps {}
 export const Navbar = styled.nav<NavbarProps>`
   width: 820px;
   height: 40px;
-
-  ul {
-    grid-auto-columns: 1fr;
-    grid-auto-flow: column;
-    column-gap: 2px;
-    padding-left: 0;
-    display: grid;
-    height: 100%;
-    margin: 0;
-
-    li {
-      display: flex;
-      list-style: none;
-      align-items: center;
-      justify-content: center;
-
-      a {
-        width: 100%;
-        height: 100%;
-        color: #ff652e;
-        line-height: 40px;
-        text-align: center;
-        white-space: nowrap;
-        background-color: #272727;
-
-        &:hover {
-          background-color: #111111;
-        }
-      }
-    }
-  }
 `;
 
 interface WatchMyStoryProps {}

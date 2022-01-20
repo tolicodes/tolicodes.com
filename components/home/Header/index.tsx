@@ -7,6 +7,9 @@ import {
   Navbar,
   WatchMyStory,
   NavWrapper,
+  NavbarItems,
+  NavbarItem,
+  NavbarItemLink,
 } from "./styled";
 
 interface HeaderProps {}
@@ -52,29 +55,29 @@ const Header = ({}: HeaderProps) => {
           </a>
         </SocialMediaLinks>
         <Navbar>
-          <ul>
-            <li>
-              <a href="#resume">Resume</a>
-            </li>
-            <li>
-              <a href="#codeMentor">CodeMentor</a>
-            </li>
-            <li>
-              <a href="#myStory">My Story</a>
-            </li>
-            <li>
-              <a href="#services">Services</a>
-            </li>
-            <li>
-              <a href="#hobbies">Hobbies</a>
-            </li>
-            <li>
-              <a href="#openSource">Open Source</a>
-            </li>
-            <li>
-              <a href="#portfolio">Portfolio</a>
-            </li>
-          </ul>
+          <NavbarItems>
+            <NavbarItem>
+              <NavbarItemLink href="#resume">Resume</NavbarItemLink>
+            </NavbarItem>
+            <NavbarItem>
+              <NavbarItemLink href="#codeMentor">CodeMentor</NavbarItemLink>
+            </NavbarItem>
+            <NavbarItem>
+              <NavbarItemLink href="#myStory">My Story</NavbarItemLink>
+            </NavbarItem>
+            <NavbarItem>
+              <NavbarItemLink href="#services">Services</NavbarItemLink>
+            </NavbarItem>
+            <NavbarItem>
+              <NavbarItemLink href="#hobbies">Hobbies</NavbarItemLink>
+            </NavbarItem>
+            <NavbarItem>
+              <NavbarItemLink href="#openSource">Open Source</NavbarItemLink>
+            </NavbarItem>
+            <NavbarItem>
+              <NavbarItemLink href="#portfolio">Portfolio</NavbarItemLink>
+            </NavbarItem>
+          </NavbarItems>
         </Navbar>
       </NavWrapper>
       <WatchMyStory>
