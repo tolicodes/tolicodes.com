@@ -108,6 +108,10 @@ const Timeline: React.FC<TimelineProps> = ({ timeline }) => {
   };
 
   const calculateRange = (_timeline: ITimeline) => {
+    const current = new Date();
+    if (_timeline.data.length === 0)
+      return { start: current.getFullYear(), end: current.getFullYear() };
+
     const r: IRangeYear = { start: 9999, end: -1 };
     for (let i = 0; i < _timeline.data.length; i++) {
       for (let j = 0; j < _timeline.data[i].experience.length; j++) {
