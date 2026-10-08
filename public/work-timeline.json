@@ -11,7 +11,7 @@
     "projects": [{
         "name": "PickleJS",
         "description": "Developed a testing Framework built on top of Cypress",
-        "url": "https://picklejs.com",
+        "url": "https://picklejs.toli.me/",
         "image_url": "picklejs.png"
     }]
 }, {
