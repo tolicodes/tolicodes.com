@@ -85,3 +85,7 @@ In the project directory, you can run:
 ## Historical deployment navigation — October 8, 2026
 
 old.tolicodes.com serves the 2018 React deployment c11ef9453a17bbbdaf1cc59ed32a0bf935bf64f2. Its runtime loads public/work-timeline.json; PickleJS now links to the restored archived docs at https://picklejs.toli.me/. The committed patch contains only that exact JSON and the complete prior Netlify file-digest manifest. Atomic digest deployment preserves the remaining 118 files, compiled React bundle, redirects and headers; it does not rebuild the old app or replace today's tolicodes.com portfolio. JSON parsing and before/after data comparison verify that only the destination changes. Deployment verification is separate.
+
+## Behavioral analytics
+
+The owned Netlify web publication uses the existing centrally configured anonymous-only Clarity snippet. Source removes the old Google Tag Manager initializer; historical Google evidence is preserved. The current compiled artifact is patched only to remove collector blocks, retaining all original page content, compiled app assets and routing. Clarity sends no replay, DOM/CSS/text, private URLs, account identity or arbitrary properties. Source and actual hosted activation remain separate.
